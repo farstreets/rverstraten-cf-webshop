@@ -1,0 +1,75 @@
+
+/* // begin file-header /////////////////////////////////////////////////
+Developer   : Ruben Verstraten
+File        : simple_pages.scss
+Project     : CareerFoundry WebDev Course Chapter 3
+Date        : 2018-05-30
+Description : Learn Ruby on Rails by making a webshop
+*/ // end file-header ///////////////////////////////////////////////////
+
+#body_wrapper {
+  margin: 0 20px;
+
+  // Sticky footer setting of body wrapper
+  min-height: 100vh;
+  /* equal to footer height */
+  margin-bottom: -52px;
+}
+
+#top_bottom_spacing {
+  padding: 52px 0 0 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  padding: 16px;
+}
+
+.home_passport_photo {
+  margin-top: 20px;
+}
+
+h1 {
+  margin: 30px 0 20px 0;
+}
+
+#contact_iframe {
+  margin: 20px 0 40px 0;
+}
