@@ -1,7 +1,56 @@
-<h1>Home</h1>
-<p>The following image is not me. It is an image of me.</p>
-<%= image_tag("2015_07_18_RV_Pasfoto.png",
-  class: "home_passport_photo img-responsive",
-  width: "10%",
-  alt: "RV_Passport_Photo")
+<%
+=begin # file-header ####################################################
+Developer   : Ruben Verstraten
+File        : index.html.erb
+Project     : CareerFoundry WebDev Course Webshop
+Date        : 2018-06-04
+Description : HTML index
+=end # file-header ######################################################
 %>
+
+<h1>Home</h1>
+
+<%
+  # Products array
+  $products_nr = 40
+  $products = Array.new
+
+  for i in 0..($products_nr-1)
+    $products.push({
+        image: "http://via.placeholder.com/500x300",
+        img_alt: "Img%02d" % [i+1],
+        product: "Product%02d" % [i+1],
+        info: "%02d Lorem ipsum dolor amet schlitz prism letterpress organic swag waistcoat wayfarers" % [i+1]
+    })
+  end
+%>
+
+<!-- Responsive row -->
+<div id="product_show" class="container-fluid">
+  <div class="row">
+
+    <!-- Loop the products html into the webpage -->
+    <% for i in 0..($products.length-1) %>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+        <div class="aspect_ratio_1_1_outer">
+          <div class="aspect_ratio_1_1_inner">
+            <%= image_tag($products[i][:image],
+              class: "img-responsive product_image",
+              width: "10%",
+              alt: $products[i][:img_alt] )
+            %>
+            <h3>
+              <%= $products[i][:product] %>
+            </h3>
+            <p>
+              <%= $products[i][:info]    %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+
+  </div> <!-- / row -->
+</div> <!-- / container-fluid -->

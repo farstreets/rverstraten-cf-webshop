@@ -2,16 +2,21 @@
 /* // begin file-header /////////////////////////////////////////////////
 Developer   : Ruben Verstraten
 File        : simple_pages.scss
-Project     : CareerFoundry WebDev Course Chapter 3
+Project     : CareerFoundry WebDev Webshop
 Date        : 2018-05-30
-Description : Learn Ruby on Rails by making a webshop
+Description : SASS CSS
 */ // end file-header ///////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////
+// General
+/////////////////////////////////////////////////////////////////////////
+
+* {box-sizing: border-box;}
 
 #body_wrapper {
   margin: 0 20px;
-
   // Sticky footer setting of body wrapper
-  min-height: 100vh;
+  min-height: calc(100vh - 230px); // - Header && navbar
   /* equal to footer height */
   margin-bottom: -52px;
 }
@@ -20,40 +25,14 @@ Description : Learn Ruby on Rails by making a webshop
   padding: 52px 0 0 0;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+header {
+  margin: 30px 20px;
+  height: 80px;
   overflow: hidden;
-  background-color: #333333;
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111111;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
+header h1 {
+  margin-top: 0;
 }
 
 footer {
@@ -62,13 +41,95 @@ footer {
   padding: 16px;
 }
 
-.home_passport_photo {
-  margin-top: 20px;
+h1 {
+  margin: 40px 0 20px 0;
 }
 
-h1 {
-  margin: 30px 0 20px 0;
+/////////////////////////////////////////////////////////////////////////
+// Navbar
+/////////////////////////////////////////////////////////////////////////
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111111;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// Index page
+/////////////////////////////////////////////////////////////////////////
+
+#product_show {
+  margin: 40px 0 0 0;
+}
+
+.aspect_ratio_1_1_outer {
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(60% + 120px);
+  margin: 0;
+  overflow: hidden;
+  margin-bottom: 10%;
+  background-color: #EEEEEE;
+  color: #969696;
+}
+.aspect_ratio_1_1_inner {
+  position: absolute;
+  clear: both;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.product_image {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// About page
+/////////////////////////////////////////////////////////////////////////
+
+.passport_photo {
+  margin-top: 20px;
+  width: 140px;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// Contact page
+/////////////////////////////////////////////////////////////////////////
 
 #contact_iframe {
   margin: 20px 0 40px 0;
