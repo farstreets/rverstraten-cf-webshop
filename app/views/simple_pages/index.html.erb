@@ -33,8 +33,8 @@ Description : HTML index
     <% for i in 0..($products.length-1) %>
 
       <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
-        <div class="aspect_ratio_1_1_outer">
-          <div class="aspect_ratio_1_1_inner">
+        <div class="product_aspect_ratio_outer">
+          <div class="product_aspect_ratio_inner">
             <%= image_tag($products[i][:image],
               class: "img-responsive product_image",
               width: "10%",
