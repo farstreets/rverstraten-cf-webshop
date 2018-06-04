@@ -17,10 +17,10 @@ Description : HTML index
 
   for i in 0..($products_nr-1)
     $products.push({
-        image: "http://via.placeholder.com/500x300",
-        img_alt: "Img%02d" % [i+1],
-        product: "Product%02d" % [i+1],
-        info: "%02d Lorem ipsum dolor amet schlitz prism letterpress organic swag waistcoat wayfarers" % [i+1]
+      image: "http://via.placeholder.com/500x300",
+      img_alt: "Img%02d" % [i+1],
+      product: "Product%02d" % [i+1],
+      info: "%02d Lorem ipsum dolor amet schlitz prism letterpress organic swag waistcoat wayfarers" % [i+1]
     })
   end
 %>
@@ -37,7 +37,6 @@ Description : HTML index
           <div class="product_aspect_ratio_inner">
             <%= image_tag($products[i][:image],
               class: "img-responsive product_image",
-              width: "10%",
               alt: $products[i][:img_alt] )
             %>
             <h3>
