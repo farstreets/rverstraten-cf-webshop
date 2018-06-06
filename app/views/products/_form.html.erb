@@ -13,20 +13,21 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, id: "products_form_name" %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, id: "products_form_description" %>
   </div>
 
   <div class="field">
     <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
+    <%= form.text_field :image_url, id: "products_form_image_url" %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

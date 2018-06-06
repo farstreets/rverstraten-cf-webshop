@@ -1,3 +1,41 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.table {
+  table-layout: fixed;
+}
+
+.text-overflow {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.product-main-bottom-spacing {
+  padding-top: 40px;
+}
+.product-new-bottom-spacing {
+  padding-top: 40px;
+}
+.product-edit-bottom-spacing {
+  padding-top: 40px;
+}
+.product-show-bottom-spacing {
+  padding-top: 40px;
+}
+
+#products_form_name {
+  width: 100%;
+}
+
+#products_form_description {
+  width: 100%;
+  resize: none;
+  height: 5em;
+}
+
+#products_form_image_url {
+  width: 100%;
+}
