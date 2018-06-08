@@ -1,0 +1,11 @@
+<h2>Featured Product:</h2>
+
+<% if (Product.calculate(:count, :all) === 0) %>
+
+  <%= "Error: None found" %>
+
+<% else %>
+
+  <%= @featured_product.name %>
+
+<% end %>
