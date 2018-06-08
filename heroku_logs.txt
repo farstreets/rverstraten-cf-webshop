@@ -1,0 +1,100 @@
+2018-06-08T09:49:45.671481+00:00 heroku[web.1]: Idling
+2018-06-08T09:49:45.672649+00:00 heroku[web.1]: State changed from up to down
+2018-06-08T09:49:47.277098+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-06-08T09:49:47.306277+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2018-06-08T09:49:47.309732+00:00 app[web.1]: === puma shutdown: 2018-06-08 09:49:47 +0000 ===
+2018-06-08T09:49:47.309774+00:00 app[web.1]: - Goodbye!
+2018-06-08T09:49:47.309957+00:00 app[web.1]: Exiting
+2018-06-08T09:49:47.412793+00:00 heroku[web.1]: Process exited with status 143
+2018-06-08T09:50:33.163887+00:00 heroku[web.1]: Unidling
+2018-06-08T09:50:33.163887+00:00 heroku[web.1]: State changed from down to starting
+2018-06-08T09:50:33.163358+00:00 heroku[web.1]: Unidling
+2018-06-08T09:50:33.163963+00:00 heroku[web.1]: State changed from down to starting
+2018-06-08T09:50:38.824197+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 28986 -e production`
+2018-06-08T09:50:47.358260+00:00 heroku[web.1]: State changed from starting to up
+2018-06-08T09:50:47.214105+00:00 app[web.1]: => Booting Puma
+2018-06-08T09:50:47.214123+00:00 app[web.1]: => Rails 5.2.0 application starting in production
+2018-06-08T09:50:47.214125+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2018-06-08T09:50:47.214169+00:00 app[web.1]: Puma starting in single mode...
+2018-06-08T09:50:47.214241+00:00 app[web.1]: * Version 3.11.4 (ruby 2.4.1-p111), codename: Love Song
+2018-06-08T09:50:47.214292+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2018-06-08T09:50:47.214346+00:00 app[web.1]: * Environment: production
+2018-06-08T09:50:47.214537+00:00 app[web.1]: * Listening on tcp://0.0.0.0:28986
+2018-06-08T09:50:47.216189+00:00 app[web.1]: Use Ctrl-C to stop
+2018-06-08T09:50:49.232308+00:00 heroku[router]: at=info method=GET path="/robots.txt" host=rverstraten-cf4-webshop.herokuapp.com request_id=022a4d9f-a9af-4884-9cd0-ac39b51b9087 fwd="79.225.38.139" dyno=web.1 connect=1ms service=8ms status=200 bytes=228 protocol=https
+2018-06-08T09:50:49.257247+00:00 app[web.1]: I, [2018-06-08T09:50:49.257107 #4]  INFO -- : [a003e16c-249e-4b1c-8ea6-77ce3d153dac] Started GET "/" for 79.225.38.139 at 2018-06-08 09:50:49 +0000
+2018-06-08T09:50:49.281452+00:00 app[web.1]: I, [2018-06-08T09:50:49.281291 #4]  INFO -- : [a003e16c-249e-4b1c-8ea6-77ce3d153dac] Processing by SimplePagesController#index as HTML
+2018-06-08T09:50:49.327945+00:00 app[web.1]: I, [2018-06-08T09:50:49.327804 #4]  INFO -- : [a003e16c-249e-4b1c-8ea6-77ce3d153dac]   Rendering simple_pages/index.html.erb within layouts/application
+2018-06-08T09:50:49.336578+00:00 app[web.1]: I, [2018-06-08T09:50:49.336420 #4]  INFO -- : [a003e16c-249e-4b1c-8ea6-77ce3d153dac]   Rendered simple_pages/index.html.erb within layouts/application (8.3ms)
+2018-06-08T09:50:49.341451+00:00 app[web.1]: I, [2018-06-08T09:50:49.341363 #4]  INFO -- : [a003e16c-249e-4b1c-8ea6-77ce3d153dac] Completed 200 OK in 60ms (Views: 15.7ms)
+2018-06-08T09:50:49.346129+00:00 heroku[router]: at=info method=GET path="/" host=rverstraten-cf4-webshop.herokuapp.com request_id=a003e16c-249e-4b1c-8ea6-77ce3d153dac fwd="79.225.38.139" dyno=web.1 connect=0ms service=102ms status=200 bytes=22716 protocol=https
+2018-06-08T09:50:49.676880+00:00 heroku[router]: at=info method=GET path="/assets/application-da334b73abd17a8596d2bd6e1871fc017e357ae04308b45a3206b9a443b5a913.css" host=rverstraten-cf4-webshop.herokuapp.com request_id=e7847d42-9f48-4413-8adb-95f7a0ffb8c0 fwd="79.225.38.139" dyno=web.1 connect=0ms service=2ms status=200 bytes=1013 protocol=https
+2018-06-08T09:50:49.807431+00:00 heroku[router]: at=info method=GET path="/assets/application-8b9959706351d90c7cc2dbf682cf87614f7d022437718bb1151cba4fd6ccf434.js" host=rverstraten-cf4-webshop.herokuapp.com request_id=d83715e6-b8dd-4133-ae7f-1d6f39e996b9 fwd="79.225.38.139" dyno=web.1 connect=0ms service=16ms status=200 bytes=72328 protocol=https
+2018-06-08T09:50:51.296168+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rverstraten-cf4-webshop.herokuapp.com request_id=1dace370-1b0b-46ce-8aac-26c91c0c1fdc fwd="79.225.38.139" dyno=web.1 connect=0ms service=14ms status=200 bytes=143 protocol=https
+2018-06-08T09:52:12.582763+00:00 app[web.1]: I, [2018-06-08T09:52:12.582630 #4]  INFO -- : [cfae655f-b4e2-4ffc-849d-628bf89eac0d] Started GET "/products" for 79.225.38.139 at 2018-06-08 09:52:12 +0000
+2018-06-08T09:52:12.584818+00:00 app[web.1]: I, [2018-06-08T09:52:12.584728 #4]  INFO -- : [cfae655f-b4e2-4ffc-849d-628bf89eac0d] Processing by ProductsController#index as HTML
+2018-06-08T09:52:12.619453+00:00 app[web.1]: I, [2018-06-08T09:52:12.618913 #4]  INFO -- : [cfae655f-b4e2-4ffc-849d-628bf89eac0d]   Rendering products/index.html.erb within layouts/application
+2018-06-08T09:52:12.746381+00:00 app[web.1]: D, [2018-06-08T09:52:12.745878 #4] DEBUG -- : [cfae655f-b4e2-4ffc-849d-628bf89eac0d]   [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+2018-06-08T09:52:12.797766+00:00 app[web.1]: I, [2018-06-08T09:52:12.797582 #4]  INFO -- : [cfae655f-b4e2-4ffc-849d-628bf89eac0d]   Rendered products/index.html.erb within layouts/application (178.0ms)
+2018-06-08T09:52:12.799622+00:00 app[web.1]: I, [2018-06-08T09:52:12.799518 #4]  INFO -- : [cfae655f-b4e2-4ffc-849d-628bf89eac0d] Completed 200 OK in 215ms (Views: 188.7ms | ActiveRecord: 64.6ms)
+2018-06-08T09:52:12.803279+00:00 heroku[router]: at=info method=GET path="/products" host=rverstraten-cf4-webshop.herokuapp.com request_id=cfae655f-b4e2-4ffc-849d-628bf89eac0d fwd="79.225.38.139" dyno=web.1 connect=0ms service=237ms status=200 bytes=9293 protocol=https
+2018-06-08T10:26:07.000000+00:00 app[api]: Build started by user rp.verstraten@gmail.com
+2018-06-08T10:26:29.000000+00:00 app[api]: Build succeeded
+2018-06-08T10:26:29.033787+00:00 app[api]: Deploy 44ff06cb by user rp.verstraten@gmail.com
+2018-06-08T10:26:29.033787+00:00 app[api]: Release v7 created by user rp.verstraten@gmail.com
+2018-06-08T10:26:30.866061+00:00 heroku[web.1]: Restarting
+2018-06-08T10:26:30.867479+00:00 heroku[web.1]: State changed from up to starting
+2018-06-08T10:26:31.988709+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2018-06-08T10:26:31.992681+00:00 app[web.1]: === puma shutdown: 2018-06-08 10:26:31 +0000 ===
+2018-06-08T10:26:31.992732+00:00 app[web.1]: - Goodbye!
+2018-06-08T10:26:31.992931+00:00 app[web.1]: Exiting
+2018-06-08T10:26:31.967401+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-06-08T10:26:32.093539+00:00 heroku[web.1]: Process exited with status 143
+2018-06-08T10:26:36.253987+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 8751 -e production`
+2018-06-08T10:26:42.060381+00:00 app[web.1]: => Booting Puma
+2018-06-08T10:26:42.060405+00:00 app[web.1]: => Rails 5.2.0 application starting in production
+2018-06-08T10:26:42.060407+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2018-06-08T10:26:42.060413+00:00 app[web.1]: Puma starting in single mode...
+2018-06-08T10:26:42.060421+00:00 app[web.1]: * Version 3.11.4 (ruby 2.4.1-p111), codename: Love Song
+2018-06-08T10:26:42.060426+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2018-06-08T10:26:42.060428+00:00 app[web.1]: * Environment: production
+2018-06-08T10:26:42.060526+00:00 app[web.1]: * Listening on tcp://0.0.0.0:8751
+2018-06-08T10:26:42.061146+00:00 app[web.1]: Use Ctrl-C to stop
+2018-06-08T10:26:42.496324+00:00 heroku[web.1]: State changed from starting to up
+2018-06-08T10:26:46.468734+00:00 app[api]: Starting process with command `rails db:migrate` by user rp.verstraten@gmail.com
+2018-06-08T10:26:50.743379+00:00 heroku[run.4049]: Awaiting client
+2018-06-08T10:26:50.769561+00:00 heroku[run.4049]: Starting process with command `rails db:migrate`
+2018-06-08T10:26:51.158481+00:00 heroku[run.4049]: State changed from starting to up
+2018-06-08T10:26:57.478015+00:00 heroku[run.4049]: Process exited with status 1
+2018-06-08T10:26:57.517858+00:00 heroku[run.4049]: State changed from up to complete
+2018-06-08T10:29:01.231233+00:00 app[web.1]: I, [2018-06-08T10:29:01.231128 #4]  INFO -- : [e3559359-35b1-4b87-95af-b83da444e36a] Started GET "/" for 82.173.167.43 at 2018-06-08 10:29:01 +0000
+2018-06-08T10:29:01.237611+00:00 app[web.1]: I, [2018-06-08T10:29:01.237513 #4]  INFO -- : [e3559359-35b1-4b87-95af-b83da444e36a] Processing by SimplePagesController#index as HTML
+2018-06-08T10:29:01.247734+00:00 app[web.1]: I, [2018-06-08T10:29:01.247656 #4]  INFO -- : [e3559359-35b1-4b87-95af-b83da444e36a]   Rendering simple_pages/index.html.erb within layouts/application
+2018-06-08T10:29:01.258635+00:00 app[web.1]: I, [2018-06-08T10:29:01.258525 #4]  INFO -- : [e3559359-35b1-4b87-95af-b83da444e36a]   Rendered simple_pages/index.html.erb within layouts/application (10.6ms)
+2018-06-08T10:29:01.261463+00:00 app[web.1]: I, [2018-06-08T10:29:01.261376 #4]  INFO -- : [e3559359-35b1-4b87-95af-b83da444e36a] Completed 200 OK in 23ms (Views: 14.9ms)
+2018-06-08T10:29:01.405313+00:00 heroku[router]: at=info method=GET path="/assets/application-da334b73abd17a8596d2bd6e1871fc017e357ae04308b45a3206b9a443b5a913.css" host=rverstraten-cf4-webshop.herokuapp.com request_id=fa7dd7f5-01d6-4ba0-a356-d50fc8c2f16b fwd="82.173.167.43" dyno=web.1 connect=1ms service=2ms status=304 bytes=48 protocol=https
+2018-06-08T10:29:01.264679+00:00 heroku[router]: at=info method=GET path="/" host=rverstraten-cf4-webshop.herokuapp.com request_id=e3559359-35b1-4b87-95af-b83da444e36a fwd="82.173.167.43" dyno=web.1 connect=1ms service=37ms status=200 bytes=22714 protocol=https
+2018-06-08T10:29:01.407578+00:00 heroku[router]: at=info method=GET path="/assets/application-8b9959706351d90c7cc2dbf682cf87614f7d022437718bb1151cba4fd6ccf434.js" host=rverstraten-cf4-webshop.herokuapp.com request_id=9b400b8b-ad35-496d-8dbd-09cb0aa1e014 fwd="82.173.167.43" dyno=web.1 connect=0ms service=1ms status=304 bytes=48 protocol=https
+2018-06-08T10:29:02.200475+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rverstraten-cf4-webshop.herokuapp.com request_id=6fc4ae1a-8525-429e-a6cb-f256484fc9e5 fwd="82.173.167.43" dyno=web.1 connect=0ms service=2ms status=200 bytes=143 protocol=https
+2018-06-08T10:29:05.782639+00:00 heroku[router]: at=info method=GET path="/products" host=rverstraten-cf4-webshop.herokuapp.com request_id=13ab0cd6-8030-40f3-a212-41bfeab16be8 fwd="82.173.167.43" dyno=web.1 connect=0ms service=133ms status=500 bytes=1827 protocol=https
+2018-06-08T10:29:05.654510+00:00 app[web.1]: I, [2018-06-08T10:29:05.654399 #4]  INFO -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8] Started GET "/products" for 82.173.167.43 at 2018-06-08 10:29:05 +0000
+2018-06-08T10:29:05.657925+00:00 app[web.1]: I, [2018-06-08T10:29:05.657840 #4]  INFO -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8] Processing by ProductsController#index as HTML
+2018-06-08T10:29:05.665785+00:00 app[web.1]: I, [2018-06-08T10:29:05.665684 #4]  INFO -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8]   Rendering products/index.html.erb within layouts/application
+2018-06-08T10:29:05.730101+00:00 app[web.1]: D, [2018-06-08T10:29:05.729966 #4] DEBUG -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8]   [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+2018-06-08T10:29:05.781498+00:00 app[web.1]: I, [2018-06-08T10:29:05.781376 #4]  INFO -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8]   Rendered products/index.html.erb within layouts/application (115.3ms)
+2018-06-08T10:29:05.781779+00:00 app[web.1]: I, [2018-06-08T10:29:05.781710 #4]  INFO -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8] Completed 500 Internal Server Error in 124ms (ActiveRecord: 30.5ms)
+2018-06-08T10:29:05.782653+00:00 app[web.1]: F, [2018-06-08T10:29:05.782516 #4] FATAL -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8]
+2018-06-08T10:29:05.782864+00:00 app[web.1]: F, [2018-06-08T10:29:05.782790 #4] FATAL -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8] ActionView::Template::Error (undefined method `colour' for #<Product:0x000000052cb0f0>
+2018-06-08T10:29:05.782867+00:00 app[web.1]: Did you mean?  color
+2018-06-08T10:29:05.782869+00:00 app[web.1]: color?
+2018-06-08T10:29:05.782871+00:00 app[web.1]: color=):
+2018-06-08T10:29:05.783196+00:00 app[web.1]: F, [2018-06-08T10:29:05.783117 #4] FATAL -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8]     23:       <tr>
+2018-06-08T10:29:05.783199+00:00 app[web.1]: [13ab0cd6-8030-40f3-a212-41bfeab16be8]     24:         <td colspan="30"><span class="text-overflow"><%= product.name %></span></td>
+2018-06-08T10:29:05.783201+00:00 app[web.1]: [13ab0cd6-8030-40f3-a212-41bfeab16be8]     25:         <td colspan="50"><span class="text-overflow"><%= product.description %></span></td>
+2018-06-08T10:29:05.783203+00:00 app[web.1]: [13ab0cd6-8030-40f3-a212-41bfeab16be8]     26:         <td colspan="20"><span class="text-overflow"><%= product.colour %></span></td>
+2018-06-08T10:29:05.783205+00:00 app[web.1]: [13ab0cd6-8030-40f3-a212-41bfeab16be8]     27:         <td colspan="20"><span class="text-overflow"><%= product.price %></span></td>
+2018-06-08T10:29:05.783206+00:00 app[web.1]: [13ab0cd6-8030-40f3-a212-41bfeab16be8]     28:         <td colspan="30"><span class="text-overflow"><%= product.image_url %></span></td>
+2018-06-08T10:29:05.783208+00:00 app[web.1]: [13ab0cd6-8030-40f3-a212-41bfeab16be8]     29:         <td colspan="20"><%= link_to 'Show', product %>
+2018-06-08T10:29:05.783317+00:00 app[web.1]: F, [2018-06-08T10:29:05.783239 #4] FATAL -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8]
+2018-06-08T10:29:05.783426+00:00 app[web.1]: F, [2018-06-08T10:29:05.783354 #4] FATAL -- : [13ab0cd6-8030-40f3-a212-41bfeab16be8] app/views/products/index.html.erb:26:in `block in _app_views_products_index_html_erb__3645408343203567853_44575180'
+2018-06-08T10:29:05.783429+00:00 app[web.1]: [13ab0cd6-8030-40f3-a212-41bfeab16be8] app/views/products/index.html.erb:22:in `_app_views_products_index_html_erb__3645408343203567853_44575180'
