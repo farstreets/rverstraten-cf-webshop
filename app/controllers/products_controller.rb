@@ -1,10 +1,17 @@
 class ProductsController < ApplicationController
+  # The master layout for all product pages can be specified here.
+  # To specify different master layouts for the pages:
+  # 'render layout ""' within dev for the pages...
+  layout "products"
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
   def index
+    # Get an array of all products from the database
     @products = Product.all
+    # @products = Product.limit(3)
+    # render layout: "products"
     @test_variable = 42
   end
 
