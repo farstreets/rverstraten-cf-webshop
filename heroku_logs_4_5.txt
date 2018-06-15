@@ -1,0 +1,100 @@
+2018-06-13T15:22:28.872922+00:00 app[web.1]: I, [2018-06-13T15:22:28.872849 #4]  INFO -- : [987dc491-8664-4bfe-a6c1-0efa24ac69e6] Completed 200 OK in 148ms (Views: 4.4ms | ActiveRecord: 96.2ms)
+2018-06-13T15:22:28.876813+00:00 heroku[router]: at=info method=GET path="/" host=rverstraten-cf4-webshop.herokuapp.com request_id=987dc491-8664-4bfe-a6c1-0efa24ac69e6 fwd="79.225.3.129" dyno=web.1 connect=0ms service=154ms status=200 bytes=2329 protocol=https
+2018-06-13T15:22:29.269408+00:00 heroku[router]: at=info method=GET path="/assets/application-da334b73abd17a8596d2bd6e1871fc017e357ae04308b45a3206b9a443b5a913.css" host=rverstraten-cf4-webshop.herokuapp.com request_id=abba50b7-2f73-471c-8b2d-cc53cbbb3f25 fwd="79.225.3.129" dyno=web.1 connect=1ms service=2ms status=200 bytes=1013 protocol=https
+2018-06-13T15:22:29.388871+00:00 heroku[router]: at=info method=GET path="/assets/application-8b9959706351d90c7cc2dbf682cf87614f7d022437718bb1151cba4fd6ccf434.js" host=rverstraten-cf4-webshop.herokuapp.com request_id=3997f32f-0bb9-40c5-b378-d49ca55032be fwd="79.225.3.129" dyno=web.1 connect=0ms service=2ms status=200 bytes=72328 protocol=https
+2018-06-13T15:22:30.146297+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rverstraten-cf4-webshop.herokuapp.com request_id=8d11a4a0-dfbd-429c-a85b-2f4db066e395 fwd="79.225.3.129" dyno=web.1 connect=0ms service=1ms status=200 bytes=143 protocol=https
+2018-06-13T15:58:57.795765+00:00 heroku[web.1]: Idling
+2018-06-13T15:58:57.796382+00:00 heroku[web.1]: State changed from up to down
+2018-06-13T15:58:58.458589+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2018-06-13T15:58:58.459428+00:00 app[web.1]: === puma shutdown: 2018-06-13 15:58:58 +0000 ===
+2018-06-13T15:58:58.459433+00:00 app[web.1]: - Goodbye!
+2018-06-13T15:58:58.459948+00:00 app[web.1]: Exiting
+2018-06-13T15:58:58.452277+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-06-13T15:58:58.519391+00:00 heroku[web.1]: Process exited with status 143
+2018-06-14T22:03:02.000000+00:00 app[api]: Build started by user rp.verstraten@gmail.com
+2018-06-14T22:03:31.899281+00:00 heroku[web.1]: State changed from down to starting
+2018-06-14T22:03:31.250333+00:00 app[api]: Release v11 created by user rp.verstraten@gmail.com
+2018-06-14T22:03:31.250333+00:00 app[api]: Deploy 4dca6666 by user rp.verstraten@gmail.com
+2018-06-14T22:03:31.000000+00:00 app[api]: Build succeeded
+2018-06-14T22:03:35.803752+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 51353 -e production`
+2018-06-14T22:03:40.128193+00:00 app[web.1]: => Booting Puma
+2018-06-14T22:03:40.128217+00:00 app[web.1]: => Rails 5.2.0 application starting in production
+2018-06-14T22:03:40.128219+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2018-06-14T22:03:40.128221+00:00 app[web.1]: Puma starting in single mode...
+2018-06-14T22:03:40.128231+00:00 app[web.1]: * Version 3.11.4 (ruby 2.4.1-p111), codename: Love Song
+2018-06-14T22:03:40.128233+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2018-06-14T22:03:40.128234+00:00 app[web.1]: * Environment: production
+2018-06-14T22:03:40.128321+00:00 app[web.1]: * Listening on tcp://0.0.0.0:51353
+2018-06-14T22:03:40.128732+00:00 app[web.1]: Use Ctrl-C to stop
+2018-06-14T22:03:40.588042+00:00 heroku[web.1]: State changed from starting to up
+2018-06-14T22:03:43.052671+00:00 app[web.1]: I, [2018-06-14T22:03:43.052543 #4]  INFO -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831] Started GET "/" for 77.166.104.115 at 2018-06-14 22:03:43 +0000
+2018-06-14T22:03:43.056712+00:00 app[web.1]: I, [2018-06-14T22:03:43.056623 #4]  INFO -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831] Processing by SimplePagesController#landing_page as HTML
+2018-06-14T22:03:43.176655+00:00 app[web.1]: D, [2018-06-14T22:03:43.176440 #4] DEBUG -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]   [1m[36mProduct Load (6.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+2018-06-14T22:03:43.201160+00:00 app[web.1]: I, [2018-06-14T22:03:43.201039 #4]  INFO -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]   Rendering simple_pages/landing_page.html.erb within layouts/application
+2018-06-14T22:03:43.206097+00:00 app[web.1]: D, [2018-06-14T22:03:43.205872 #4] DEBUG -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]   [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+2018-06-14T22:03:43.207769+00:00 app[web.1]: D, [2018-06-14T22:03:43.207672 #4] DEBUG -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]   [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+2018-06-14T22:03:43.210825+00:00 app[web.1]: I, [2018-06-14T22:03:43.210728 #4]  INFO -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]   Rendered collection of simple_pages/_product.html.erb [2 times] (1.7ms)
+2018-06-14T22:03:43.210994+00:00 app[web.1]: I, [2018-06-14T22:03:43.210910 #4]  INFO -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]   Rendered simple_pages/landing_page.html.erb within layouts/application (9.7ms)
+2018-06-14T22:03:43.211231+00:00 app[web.1]: I, [2018-06-14T22:03:43.211166 #4]  INFO -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831] Completed 500 Internal Server Error in 154ms (ActiveRecord: 98.2ms)
+2018-06-14T22:03:43.212024+00:00 app[web.1]: F, [2018-06-14T22:03:43.211952 #4] FATAL -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]
+2018-06-14T22:03:43.212071+00:00 app[web.1]: F, [2018-06-14T22:03:43.212018 #4] FATAL -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831] ActionView::Template::Error (The asset "adfkjk" is not present in the asset pipeline.):
+2018-06-14T22:03:43.212248+00:00 app[web.1]: F, [2018-06-14T22:03:43.212179 #4] FATAL -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]     1: <!-- < % @products.each do |product| % > -->
+2018-06-14T22:03:43.212253+00:00 app[web.1]: [d8b1defb-90ec-47d9-bba6-1c2fa3162831]     2:   <div class="item<%= " active" if product == @products.first %>">
+2018-06-14T22:03:43.212254+00:00 app[web.1]: [d8b1defb-90ec-47d9-bba6-1c2fa3162831]     3:     <%= image_tag(product.image_url,
+2018-06-14T22:03:43.212256+00:00 app[web.1]: [d8b1defb-90ec-47d9-bba6-1c2fa3162831]     4:       class: "img-responsive carousel_image",
+2018-06-14T22:03:43.212259+00:00 app[web.1]: [d8b1defb-90ec-47d9-bba6-1c2fa3162831]     5:       alt: product.image_url )
+2018-06-14T22:03:43.212261+00:00 app[web.1]: [d8b1defb-90ec-47d9-bba6-1c2fa3162831]     6:     %>
+2018-06-14T22:03:43.212296+00:00 app[web.1]: F, [2018-06-14T22:03:43.212239 #4] FATAL -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831]
+2018-06-14T22:03:43.212350+00:00 app[web.1]: F, [2018-06-14T22:03:43.212297 #4] FATAL -- : [d8b1defb-90ec-47d9-bba6-1c2fa3162831] app/views/simple_pages/_product.html.erb:3:in `_app_views_simple_pages__product_html_erb__3275251066294131438_35390940'
+2018-06-14T22:03:43.212352+00:00 app[web.1]: [d8b1defb-90ec-47d9-bba6-1c2fa3162831] app/views/simple_pages/landing_page.html.erb:36:in `_app_views_simple_pages_landing_page_html_erb___935377300298408351_35535040'
+2018-06-14T22:03:43.213804+00:00 heroku[router]: at=info method=GET path="/" host=rverstraten-cf4-webshop.herokuapp.com request_id=d8b1defb-90ec-47d9-bba6-1c2fa3162831 fwd="77.166.104.115" dyno=web.1 connect=1ms service=164ms status=500 bytes=1827 protocol=https
+2018-06-14T22:03:44.006413+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rverstraten-cf4-webshop.herokuapp.com request_id=6c334a0c-32ce-4ae5-ab81-732c43ee3e89 fwd="77.166.104.115" dyno=web.1 connect=1ms service=2ms status=200 bytes=143 protocol=https
+2018-06-14T22:04:11.321510+00:00 app[api]: Starting process with command `rails db:migrate` by user rp.verstraten@gmail.com
+2018-06-14T22:04:16.297644+00:00 heroku[run.7046]: Awaiting client
+2018-06-14T22:04:16.335982+00:00 heroku[run.7046]: Starting process with command `rails db:migrate`
+2018-06-14T22:04:19.197275+00:00 heroku[run.7046]: State changed from starting to up
+2018-06-14T22:04:23.633769+00:00 heroku[run.7046]: Process exited with status 0
+2018-06-14T22:04:25.187958+00:00 heroku[run.7046]: State changed from up to complete
+2018-06-14T22:04:30.165734+00:00 heroku[router]: at=info method=GET path="/" host=rverstraten-cf4-webshop.herokuapp.com request_id=22d05da0-45eb-45d8-a62e-e4bb20532d30 fwd="77.166.104.115" dyno=web.1 connect=1ms service=15ms status=500 bytes=1827 protocol=https
+2018-06-14T22:04:30.151835+00:00 app[web.1]: I, [2018-06-14T22:04:30.151676 #4]  INFO -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30] Started GET "/" for 77.166.104.115 at 2018-06-14 22:04:30 +0000
+2018-06-14T22:04:30.153049+00:00 app[web.1]: I, [2018-06-14T22:04:30.152953 #4]  INFO -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30] Processing by SimplePagesController#landing_page as HTML
+2018-06-14T22:04:30.156677+00:00 app[web.1]: D, [2018-06-14T22:04:30.156572 #4] DEBUG -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]   [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+2018-06-14T22:04:30.157840+00:00 app[web.1]: I, [2018-06-14T22:04:30.157749 #4]  INFO -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]   Rendering simple_pages/landing_page.html.erb within layouts/application
+2018-06-14T22:04:30.159233+00:00 app[web.1]: D, [2018-06-14T22:04:30.159140 #4] DEBUG -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+2018-06-14T22:04:30.160494+00:00 app[web.1]: D, [2018-06-14T22:04:30.160398 #4] DEBUG -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]   [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+2018-06-14T22:04:30.162435+00:00 app[web.1]: I, [2018-06-14T22:04:30.162350 #4]  INFO -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]   Rendered collection of simple_pages/_product.html.erb [2 times] (1.3ms)
+2018-06-14T22:04:30.162642+00:00 app[web.1]: I, [2018-06-14T22:04:30.162529 #4]  INFO -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]   Rendered simple_pages/landing_page.html.erb within layouts/application (4.6ms)
+2018-06-14T22:04:30.162891+00:00 app[web.1]: I, [2018-06-14T22:04:30.162806 #4]  INFO -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30] Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.6ms)
+2018-06-14T22:04:30.164296+00:00 app[web.1]: F, [2018-06-14T22:04:30.164204 #4] FATAL -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]
+2018-06-14T22:04:30.164393+00:00 app[web.1]: F, [2018-06-14T22:04:30.164326 #4] FATAL -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30] ActionView::Template::Error (The asset "adfkjk" is not present in the asset pipeline.):
+2018-06-14T22:04:30.164643+00:00 app[web.1]: F, [2018-06-14T22:04:30.164550 #4] FATAL -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]     1: <!-- < % @products.each do |product| % > -->
+2018-06-14T22:04:30.164649+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     2:   <div class="item<%= " active" if product == @products.first %>">
+2018-06-14T22:04:30.164650+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     3:     <%= image_tag(product.image_url,
+2018-06-14T22:04:30.164651+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     4:       class: "img-responsive carousel_image",
+2018-06-14T22:04:30.164654+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     5:       alt: product.image_url )
+2018-06-14T22:04:30.164655+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     6:     %>
+2018-06-14T22:04:30.164827+00:00 app[web.1]: F, [2018-06-14T22:04:30.164746 #4] FATAL -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30] app/views/simple_pages/_product.html.erb:3:in `_app_views_simple_pages__product_html_erb__3275251066294131438_35390940'
+2018-06-14T22:04:30.164728+00:00 app[web.1]: F, [2018-06-14T22:04:30.164648 #4] FATAL -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]
+2018-06-14T22:04:30.164829+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30] app/views/simple_pages/landing_page.html.erb:36:in `_app_views_simple_pages_landing_page_html_erb___935377300298408351_35535040'
+2018-06-14T22:04:30.441429+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rverstraten-cf4-webshop.herokuapp.com request_id=048d32b4-940b-4bc0-b1bb-71d1c0078856 fwd="77.166.104.115" dyno=web.1 connect=1ms service=2ms status=200 bytes=143 protocol=https
+2018-06-14T22:04:37.685381+00:00 heroku[router]: at=info method=GET path="/" host=rverstraten-cf4-webshop.herokuapp.com request_id=026ffa87-a0f8-4f83-afa9-15d17956401b fwd="77.166.104.115" dyno=web.1 connect=1ms service=11ms status=500 bytes=1827 protocol=https
+2018-06-14T22:04:37.675526+00:00 app[web.1]: I, [2018-06-14T22:04:37.675418 #4]  INFO -- : [026ffa87-a0f8-4f83-afa9-15d17956401b] Started GET "/" for 77.166.104.115 at 2018-06-14 22:04:37 +0000
+2018-06-14T22:04:37.676236+00:00 app[web.1]: I, [2018-06-14T22:04:37.676162 #4]  INFO -- : [026ffa87-a0f8-4f83-afa9-15d17956401b] Processing by SimplePagesController#landing_page as HTML
+2018-06-14T22:04:37.679062+00:00 app[web.1]: D, [2018-06-14T22:04:37.678976 #4] DEBUG -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]   [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+2018-06-14T22:04:37.679700+00:00 app[web.1]: I, [2018-06-14T22:04:37.679628 #4]  INFO -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]   Rendering simple_pages/landing_page.html.erb within layouts/application
+2018-06-14T22:04:37.680922+00:00 app[web.1]: D, [2018-06-14T22:04:37.680837 #4] DEBUG -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+2018-06-14T22:04:37.681947+00:00 app[web.1]: D, [2018-06-14T22:04:37.681869 #4] DEBUG -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]   [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+2018-06-14T22:04:37.683116+00:00 app[web.1]: I, [2018-06-14T22:04:37.683046 #4]  INFO -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]   Rendered collection of simple_pages/_product.html.erb [2 times] (0.8ms)
+2018-06-14T22:04:37.683251+00:00 app[web.1]: I, [2018-06-14T22:04:37.683177 #4]  INFO -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]   Rendered simple_pages/landing_page.html.erb within layouts/application (3.4ms)
+2018-06-14T22:04:37.683412+00:00 app[web.1]: I, [2018-06-14T22:04:37.683357 #4]  INFO -- : [026ffa87-a0f8-4f83-afa9-15d17956401b] Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.4ms)
+2018-06-14T22:04:37.684206+00:00 app[web.1]: F, [2018-06-14T22:04:37.684141 #4] FATAL -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]
+2018-06-14T22:04:37.684263+00:00 app[web.1]: F, [2018-06-14T22:04:37.684204 #4] FATAL -- : [026ffa87-a0f8-4f83-afa9-15d17956401b] ActionView::Template::Error (The asset "adfkjk" is not present in the asset pipeline.):
+2018-06-14T22:04:37.684405+00:00 app[web.1]: F, [2018-06-14T22:04:37.684347 #4] FATAL -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]     1: <!-- < % @products.each do |product| % > -->
+2018-06-14T22:04:37.684406+00:00 app[web.1]: [026ffa87-a0f8-4f83-afa9-15d17956401b]     2:   <div class="item<%= " active" if product == @products.first %>">
+2018-06-14T22:04:37.684408+00:00 app[web.1]: [026ffa87-a0f8-4f83-afa9-15d17956401b]     3:     <%= image_tag(product.image_url,
+2018-06-14T22:04:37.684409+00:00 app[web.1]: [026ffa87-a0f8-4f83-afa9-15d17956401b]     4:       class: "img-responsive carousel_image",
+2018-06-14T22:04:37.684410+00:00 app[web.1]: [026ffa87-a0f8-4f83-afa9-15d17956401b]     5:       alt: product.image_url )
+2018-06-14T22:04:37.684412+00:00 app[web.1]: [026ffa87-a0f8-4f83-afa9-15d17956401b]     6:     %>
+2018-06-14T22:04:37.684452+00:00 app[web.1]: F, [2018-06-14T22:04:37.684406 #4] FATAL -- : [026ffa87-a0f8-4f83-afa9-15d17956401b]
+2018-06-14T22:04:37.684508+00:00 app[web.1]: F, [2018-06-14T22:04:37.684460 #4] FATAL -- : [026ffa87-a0f8-4f83-afa9-15d17956401b] app/views/simple_pages/_product.html.erb:3:in `_app_views_simple_pages__product_html_erb__3275251066294131438_35390940'
+2018-06-14T22:04:37.684510+00:00 app[web.1]: [026ffa87-a0f8-4f83-afa9-15d17956401b] app/views/simple_pages/landing_page.html.erb:36:in `_app_views_simple_pages_landing_page_html_erb___935377300298408351_35535040'
