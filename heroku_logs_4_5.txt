@@ -71,7 +71,7 @@
 2018-06-14T22:04:30.164649+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     2:   <div class="item<%= " active" if product == @products.first %>">
 2018-06-14T22:04:30.164650+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     3:     <%= image_tag(product.image_url,
 2018-06-14T22:04:30.164651+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     4:       class: "img-responsive carousel_image",
-2018-06-14T22:04:30.164654+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     5:       alt: product.image_url )
+2018-06-14T22:04:30.164654+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     5:       alt: product.image_url )Family
 2018-06-14T22:04:30.164655+00:00 app[web.1]: [22d05da0-45eb-45d8-a62e-e4bb20532d30]     6:     %>
 2018-06-14T22:04:30.164827+00:00 app[web.1]: F, [2018-06-14T22:04:30.164746 #4] FATAL -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30] app/views/simple_pages/_product.html.erb:3:in `_app_views_simple_pages__product_html_erb__3275251066294131438_35390940'
 2018-06-14T22:04:30.164728+00:00 app[web.1]: F, [2018-06-14T22:04:30.164648 #4] FATAL -- : [22d05da0-45eb-45d8-a62e-e4bb20532d30]

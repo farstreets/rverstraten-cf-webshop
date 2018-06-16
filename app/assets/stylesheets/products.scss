@@ -47,3 +47,27 @@
 #products_form_image_url {
   width: 100%;
 }
+
+.product_aspect_ratio_outer_2 {
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(100% + 120px);
+  margin: 0;
+  overflow: hidden;
+  margin-bottom: 10%;
+  background-color: white;
+  color: black;
+}
+.product_aspect_ratio_inner_2 {
+  position: absolute;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+.product_image_2 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
