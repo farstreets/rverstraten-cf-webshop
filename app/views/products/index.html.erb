@@ -8,7 +8,7 @@
       <th colspan="30">Name</th>
       <th colspan="50">Description</th>
       <th colspan="20">Colour</th>
-      <th colspan="20">Price (€)</th>
+      <th colspan="20">Price</th>
       <th colspan="30">Image url</th>
       <th colspan="20"></th>
       <!-- <th class="prod_table_name_width">Name</th>
@@ -24,7 +24,7 @@
         <td colspan="30"><span class="text-overflow"><%= product.name %></span></td>
         <td colspan="50"><span class="text-overflow"><%= product.description %></span></td>
         <td colspan="20"><span class="text-overflow"><%= product.colour %></span></td>
-        <td colspan="20"><span class="text-overflow"><%= product.price %></span></td>
+        <td colspan="20"><span class="text-overflow"><%= number_to_currency(product.price, unit: "€") %></span></td>
         <td colspan="30"><span class="text-overflow"><%= product.image_url %></span></td>
         <td colspan="20"><%= link_to 'Show', product %>
           <%= link_to 'Edit', edit_product_path(product) %>

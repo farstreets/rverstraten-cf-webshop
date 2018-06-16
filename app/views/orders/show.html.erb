@@ -1,0 +1,10 @@
+<!-- The following is added in app/controllers/orders_controller.rb -->
+<!-- @order = Order.find(params[:id]) -->
+
+<div class="container">
+  <h2>Order Information</h2>
+  <strong>Order ID: </strong><%= @order.id %>
+  <strong>Product Name: </strong><%= @order.product.name %>
+  <strong>Product Price: </strong><%= number_to_currency(@order.product.price.to_f, unit: "€") %>
+  <strong>Total Price: </strong><%= number_to_currency(@order.total.to_f, unit: "€") %>
+</div>

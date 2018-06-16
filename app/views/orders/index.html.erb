@@ -1,1 +1,13 @@
 
+<div class="row">
+  <% @orders.each do |order| %>
+    <div class="col-sm-2 col-md-4">
+      <h1>
+        Order # <%= order.id %>:
+        <%= link_to order.product.name, order %>
+      </h1>
+      <p><%= order.product.description %></p>
+      <strong><%= number_to_currency(order.product.price, unit: "€") %></strong>
+    </div><!-- /col -->
+  <% end %>
+</div>

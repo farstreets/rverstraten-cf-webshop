@@ -18,8 +18,8 @@
 </p>
 
 <p>
-  <strong>Price (€):</strong>
-  <span class="text-overflow"><%= @product.price %></span>
+  <strong>Price:</strong>
+  <span class="text-overflow"><%= number_to_currency(@product.price, unit: "€") %></span>
 </p>
 
 <p>
