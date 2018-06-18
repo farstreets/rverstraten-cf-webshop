@@ -1,12 +1,10 @@
 <nav>
   <div id="centerDiv">
     <ul class="centerUL">
-      <li><%= image_tag("favicon.png",
+      <li><%= link_to image_tag("favicon.png",
         id: "icon_navbar",
         class: "img-responsive",
-        alt: "Icon")
-      %></li>
-      <li><%= link_to "Home", root_path %></li>
+        alt: "Icon"), root_path %></li>
       <li><%= link_to "About", simple_pages_about_path %></li>
       <li><%= link_to "Contact", simple_pages_contact_path %></li>
       <li><%= link_to "Ducks", products_path %></li>
