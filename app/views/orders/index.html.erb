@@ -3,7 +3,7 @@
   <% @orders.each do |order| %>
     <div class="col-sm-2 col-md-4">
       <h1>
-        Order # <%= order.id %>:
+        Chat # <%= order.id %>:
         <%= link_to order.product.name, order %>
       </h1>
       <p><%= order.product.description %></p>

@@ -11,6 +11,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <!-- < % = favicon_link_tag 'favicon.ico' % > -->
+    <!-- < % = favicon_link_tag(source = "favicon.png", options = {}) % > -->
+    <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
+    <!-- < % = favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon" % > -->
+
   </head>
 
   <body>
