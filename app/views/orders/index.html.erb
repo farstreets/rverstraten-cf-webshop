@@ -1,15 +1,17 @@
 
 <h1>Chats Booked</h1>
 
-<div class="row">
-  <% @orders.each do |order| %>
-    <div class="col-sm-2 col-md-4">
-      <h1>
-        Chat # <%= order.id %>:
-        <%= link_to order.product.name, order %>
-      </h1>
-      <p><%= order.product.description %></p>
-      <strong><%= number_to_currency(order.product.price, unit: "€") %></strong>
-    </div><!-- /col -->
-  <% end %>
+<div class="container-fluid">
+  <div class="row">
+    <% @orders.each do |order| %>
+      <div id="order_item" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+        <h2>
+          Chat # <%= order.id %>:
+          <%= link_to order.product.name, order %>
+        </h2>
+        <p><%= order.product.description %></p>
+        <strong><%= number_to_currency(order.product.price, unit: "€") %></strong>
+      </div><!-- /col -->
+    <% end %>
+  </div>
 </div>

@@ -52,9 +52,8 @@
   position: relative;
   width: 100%;
   padding-bottom: calc(100% + 170px);
-  margin: 0;
+  margin: 0 0 15% 0;
   overflow: hidden;
-  margin-bottom: 10%;
   // background-color: white;
   color: black;
 }
@@ -70,4 +69,12 @@
   width: 100%;
   padding: 0;
   margin: 0;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// Order page
+/////////////////////////////////////////////////////////////////////////
+
+#order_item:last-child {
+  padding-bottom: 60px;
 }

@@ -13,17 +13,31 @@ Description : SASS CSS
 
 * {box-sizing: border-box;}
 
-#body_wrapper {
-  margin: 0 20px;
-  // Sticky footer setting of body wrapper
-  min-height: calc(100vh - 164px); // - Header && navbar
-  /* equal to footer height */
-  margin-bottom: -64px;
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  #body_wrapper {
+    margin: 0 20px;
+    // Sticky footer setting of body wrapper
+    min-height: calc(100vh - 148px); // - Header && navbar
+    /* equal to footer height */
+    margin-bottom: -64px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  #body_wrapper {
+    margin: 0 20px;
+    // Sticky footer setting of body wrapper
+    min-height: calc(100vh - 164px); // - Header && navbar
+    /* equal to footer height */
+    margin-bottom: -64px;
+  }
 }
 
 #body_wrapper h1 {
-    margin: 0;
-    padding: 40px 0 20px 0;
+  margin: 0;
+  padding: 50px 0 30px 0;
 }
 
 #top_bottom_spacing {
@@ -154,12 +168,6 @@ nav li:first-child a:hover {
   margin: 0px 10px 0 10px;
 }
 
-// #nav_spacer {
-//   padding-left: 15%;
-//   padding-right: 15%;
-//   padding-bottom: 1px;
-// }
-
 .centerUL {
   display: inline-block;
   margin: 0 auto;
@@ -168,7 +176,6 @@ nav li:first-child a:hover {
   background-color: #333333;
   height: 64px;
 }
-
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
@@ -202,7 +209,6 @@ nav li:first-child a:hover {
     width: 40px;
     margin: 0px 5px 0 5px;
   }
-
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -246,7 +252,7 @@ nav li:first-child a:hover {
 
 #carousel-example-generic {
   // width: 25%;
-  margin: 20px auto 40px auto;
+  margin: 40px auto 70px auto;
 }
 
 .carousel-control.right {
@@ -292,11 +298,6 @@ nav li:first-child a:hover {
   }
 }
 
-// #homepage_title {
-//   padding-top: 20px;
-//   padding-bottom: 10px;
-// }
-
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   #homepage_intro {
@@ -312,7 +313,6 @@ nav li:first-child a:hover {
     text-align: center;
   }
 }
-
 
 /////////////////////////////////////////////////////////////////////////
 // Index page
@@ -351,7 +351,7 @@ nav li:first-child a:hover {
 /////////////////////////////////////////////////////////////////////////
 
 .passport_photo {
-  margin: 20px auto 40px auto;
+  margin: 40px auto 60px auto;
   width: 140px;
 }
 
@@ -371,4 +371,23 @@ nav li:first-child a:hover {
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .gmaps_aspect_ratio_outer {
+    text-align: left;
+    position: relative;
+    padding-bottom: 70%;
+    margin: 60px 0 80px 0;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .gmaps_aspect_ratio_outer {
+    text-align: left;
+    position: relative;
+    padding-bottom: 40%;
+    margin: 60px 20% 80px 20%;
+  }
 }
