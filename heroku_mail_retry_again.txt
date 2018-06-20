@@ -1,0 +1,100 @@
+2018-06-20T19:46:09.441610+00:00 app[web.1]: F, [2018-06-20T19:46:09.441539 #4] FATAL -- : [ec5ceca5-fe44-49d1-b766-adb50565692a] Net::SMTPFatalError (550 Unauthenticated senders not allowed
+2018-06-20T19:46:09.441616+00:00 app[web.1]: ):
+2018-06-20T19:46:09.441674+00:00 app[web.1]: F, [2018-06-20T19:46:09.441611 #4] FATAL -- : [ec5ceca5-fe44-49d1-b766-adb50565692a]
+2018-06-20T19:46:09.441817+00:00 app[web.1]: F, [2018-06-20T19:46:09.441754 #4] FATAL -- : [ec5ceca5-fe44-49d1-b766-adb50565692a] app/controllers/simple_pages_controller.rb:20:in `thank_you'
+2018-06-20T19:46:09.445464+00:00 heroku[router]: at=info method=POST path="/simple_pages/thank_you" host=rubber-duck-debug.herokuapp.com request_id=ec5ceca5-fe44-49d1-b766-adb50565692a fwd="87.195.247.169" dyno=web.1 connect=1ms service=1337ms status=500 bytes=1827 protocol=https
+2018-06-20T19:46:09.795382+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rubber-duck-debug.herokuapp.com request_id=b9938797-e19f-426a-8c04-8c3d4f1712ab fwd="87.195.247.169" dyno=web.1 connect=0ms service=2ms status=200 bytes=143 protocol=https
+2018-06-20T19:52:24.000000+00:00 app[api]: Build started by user rp.verstraten@gmail.com
+2018-06-20T19:52:49.189820+00:00 heroku[web.1]: Restarting
+2018-06-20T19:52:49.190418+00:00 heroku[web.1]: State changed from up to starting
+2018-06-20T19:52:49.902592+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2018-06-20T19:52:49.904481+00:00 app[web.1]: === puma shutdown: 2018-06-20 19:52:49 +0000 ===
+2018-06-20T19:52:49.904488+00:00 app[web.1]: - Goodbye!
+2018-06-20T19:52:49.904583+00:00 app[web.1]: Exiting
+2018-06-20T19:52:49.891588+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-06-20T19:52:49.980353+00:00 heroku[web.1]: Process exited with status 143
+2018-06-20T19:52:48.848927+00:00 app[api]: Deploy dd64a8ac by user rp.verstraten@gmail.com
+2018-06-20T19:52:48.848927+00:00 app[api]: Release v35 created by user rp.verstraten@gmail.com
+2018-06-20T19:52:49.000000+00:00 app[api]: Build succeeded
+2018-06-20T19:52:54.208797+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 25266 -e production`
+2018-06-20T19:52:58.176579+00:00 app[web.1]: => Booting Puma
+2018-06-20T19:52:58.176601+00:00 app[web.1]: => Rails 5.2.0 application starting in production
+2018-06-20T19:52:58.176602+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2018-06-20T19:52:58.176606+00:00 app[web.1]: Puma starting in single mode...
+2018-06-20T19:52:58.176611+00:00 app[web.1]: * Version 3.11.4 (ruby 2.4.1-p111), codename: Love Song
+2018-06-20T19:52:58.176616+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2018-06-20T19:52:58.176617+00:00 app[web.1]: * Environment: production
+2018-06-20T19:52:58.176652+00:00 app[web.1]: * Listening on tcp://0.0.0.0:25266
+2018-06-20T19:52:58.176991+00:00 app[web.1]: Use Ctrl-C to stop
+2018-06-20T19:52:58.844867+00:00 heroku[web.1]: State changed from starting to up
+2018-06-20T19:53:10.088988+00:00 heroku[router]: at=info method=GET path="/" host=rubber-duck-debug.herokuapp.com request_id=c8482228-cef4-4e6c-aafe-ab51b2270b63 fwd="87.195.247.169" dyno=web.1 connect=0ms service=129ms status=200 bytes=6787 protocol=https
+2018-06-20T19:53:09.962973+00:00 app[web.1]: I, [2018-06-20T19:53:09.962866 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63] Started GET "/" for 87.195.247.169 at 2018-06-20 19:53:09 +0000
+2018-06-20T19:53:09.966197+00:00 app[web.1]: I, [2018-06-20T19:53:09.966130 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63] Processing by SimplePagesController#landing_page as HTML
+2018-06-20T19:53:10.044421+00:00 app[web.1]: D, [2018-06-20T19:53:10.044275 #4] DEBUG -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+2018-06-20T19:53:10.067381+00:00 app[web.1]: I, [2018-06-20T19:53:10.067265 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   Rendering simple_pages/landing_page.html.erb within layouts/application
+2018-06-20T19:53:10.070481+00:00 app[web.1]: D, [2018-06-20T19:53:10.070400 #4] DEBUG -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+2018-06-20T19:53:10.074573+00:00 app[web.1]: D, [2018-06-20T19:53:10.074493 #4] DEBUG -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   [1m[36mProduct Load (3.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+2018-06-20T19:53:10.077696+00:00 app[web.1]: I, [2018-06-20T19:53:10.077622 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   Rendered collection of simple_pages/_product.html.erb [5 times] (1.8ms)
+2018-06-20T19:53:10.077892+00:00 app[web.1]: I, [2018-06-20T19:53:10.077815 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   Rendered simple_pages/landing_page.html.erb within layouts/application (10.3ms)
+2018-06-20T19:53:10.082198+00:00 app[web.1]: I, [2018-06-20T19:53:10.082080 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   Rendered shared/_header.html.erb (0.6ms)
+2018-06-20T19:53:10.085127+00:00 app[web.1]: I, [2018-06-20T19:53:10.085015 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   Rendered shared/_nav.html.erb (1.9ms)
+2018-06-20T19:53:10.086813+00:00 app[web.1]: I, [2018-06-20T19:53:10.086712 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63]   Rendered shared/_footer.html.erb (0.4ms)
+2018-06-20T19:53:10.087248+00:00 app[web.1]: I, [2018-06-20T19:53:10.087176 #4]  INFO -- : [c8482228-cef4-4e6c-aafe-ab51b2270b63] Completed 200 OK in 121ms (Views: 17.1ms | ActiveRecord: 40.2ms)
+2018-06-20T19:53:12.258225+00:00 heroku[router]: at=info method=GET path="/simple_pages/contact" host=rubber-duck-debug.herokuapp.com request_id=f15de444-1faa-4b42-8f8b-b92ab34fbbf3 fwd="87.195.247.169" dyno=web.1 connect=0ms service=17ms status=200 bytes=4334 protocol=https
+2018-06-20T19:53:12.242929+00:00 app[web.1]: I, [2018-06-20T19:53:12.242825 #4]  INFO -- : [f15de444-1faa-4b42-8f8b-b92ab34fbbf3] Started GET "/simple_pages/contact" for 87.195.247.169 at 2018-06-20 19:53:12 +0000
+2018-06-20T19:53:12.247416+00:00 app[web.1]: I, [2018-06-20T19:53:12.247331 #4]  INFO -- : [f15de444-1faa-4b42-8f8b-b92ab34fbbf3] Processing by SimplePagesController#contact as HTML
+2018-06-20T19:53:12.248550+00:00 app[web.1]: I, [2018-06-20T19:53:12.248481 #4]  INFO -- : [f15de444-1faa-4b42-8f8b-b92ab34fbbf3]   Rendering simple_pages/contact.html.erb within layouts/application
+2018-06-20T19:53:12.255398+00:00 app[web.1]: I, [2018-06-20T19:53:12.255319 #4]  INFO -- : [f15de444-1faa-4b42-8f8b-b92ab34fbbf3]   Rendered simple_pages/contact.html.erb within layouts/application (6.7ms)
+2018-06-20T19:53:12.256198+00:00 app[web.1]: I, [2018-06-20T19:53:12.256119 #4]  INFO -- : [f15de444-1faa-4b42-8f8b-b92ab34fbbf3]   Rendered shared/_header.html.erb (0.0ms)
+2018-06-20T19:53:12.256731+00:00 app[web.1]: I, [2018-06-20T19:53:12.256663 #4]  INFO -- : [f15de444-1faa-4b42-8f8b-b92ab34fbbf3]   Rendered shared/_nav.html.erb (0.4ms)
+2018-06-20T19:53:12.256970+00:00 app[web.1]: I, [2018-06-20T19:53:12.256892 #4]  INFO -- : [f15de444-1faa-4b42-8f8b-b92ab34fbbf3]   Rendered shared/_footer.html.erb (0.0ms)
+2018-06-20T19:53:12.257182+00:00 app[web.1]: I, [2018-06-20T19:53:12.257111 #4]  INFO -- : [f15de444-1faa-4b42-8f8b-b92ab34fbbf3] Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+2018-06-20T19:53:28.020533+00:00 app[web.1]: I, [2018-06-20T19:53:28.020445 #4]  INFO -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285] Started POST "/simple_pages/thank_you" for 87.195.247.169 at 2018-06-20 19:53:28 +0000
+2018-06-20T19:53:28.021480+00:00 app[web.1]: I, [2018-06-20T19:53:28.021402 #4]  INFO -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285] Processing by SimplePagesController#thank_you as HTML
+2018-06-20T19:53:28.021590+00:00 app[web.1]: I, [2018-06-20T19:53:28.021502 #4]  INFO -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+KzWarSQOGd2yQileGemopiJxkTUdmA6z52r6WkeDXpDsEqFM0BkYwB0On5RYkKdO1hvFMOYy74TCZ8s4nwwjQ==", "name"=>"Ruben", "email"=>"rp.verstraten@gmail.com", "message"=>"Retry", "commit"=>"Send"}
+2018-06-20T19:53:28.027892+00:00 app[web.1]: I, [2018-06-20T19:53:28.027827 #4]  INFO -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285]   Rendering user_mailer/contact_form.html.erb within layouts/mailer
+2018-06-20T19:53:28.028379+00:00 app[web.1]: I, [2018-06-20T19:53:28.028313 #4]  INFO -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285]   Rendered user_mailer/contact_form.html.erb within layouts/mailer (0.4ms)
+2018-06-20T19:53:29.054314+00:00 heroku[router]: at=info method=POST path="/simple_pages/thank_you" host=rubber-duck-debug.herokuapp.com request_id=d7604e15-fe0c-4814-9ddb-da9cb1ea5285 fwd="87.195.247.169" dyno=web.1 connect=0ms service=1041ms status=500 bytes=1827 protocol=https
+2018-06-20T19:53:29.025936+00:00 app[web.1]: D, [2018-06-20T19:53:29.025826 #4] DEBUG -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285] UserMailer#contact_form: processed outbound mail in 1003.1ms
+2018-06-20T19:53:29.052419+00:00 app[web.1]: I, [2018-06-20T19:53:29.052311 #4]  INFO -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285] Sent mail to rp.verstraten@gmail.com (26.3ms)
+2018-06-20T19:53:29.052471+00:00 app[web.1]: D, [2018-06-20T19:53:29.052393 #4] DEBUG -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285] Date: Wed, 20 Jun 2018 19:53:29 +0000
+2018-06-20T19:53:29.052474+00:00 app[web.1]: From: rp.verstraten@gmail.com
+2018-06-20T19:53:29.052475+00:00 app[web.1]: To: rp.verstraten@gmail.com
+2018-06-20T19:53:29.052477+00:00 app[web.1]: Message-ID: <5b2ab0b970f3_425e034c80899@62bcb07a-9697-4108-9b60-bb967621dfcc.mail>
+2018-06-20T19:53:29.052479+00:00 app[web.1]: Subject: A new contact form message from Ruben
+2018-06-20T19:53:29.052481+00:00 app[web.1]: Mime-Version: 1.0
+2018-06-20T19:53:29.052483+00:00 app[web.1]: Content-Type: text/html;
+2018-06-20T19:53:29.052485+00:00 app[web.1]: charset=UTF-8
+2018-06-20T19:53:29.052487+00:00 app[web.1]: Content-Transfer-Encoding: 7bit
+2018-06-20T19:53:29.052488+00:00 app[web.1]: 
+2018-06-20T19:53:29.052490+00:00 app[web.1]: <!DOCTYPE html>
+2018-06-20T19:53:29.052492+00:00 app[web.1]: <html>
+2018-06-20T19:53:29.052493+00:00 app[web.1]: <head>
+2018-06-20T19:53:29.052495+00:00 app[web.1]: <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+2018-06-20T19:53:29.052498+00:00 app[web.1]: /* Email styles need to be inline */
+2018-06-20T19:53:29.052497+00:00 app[web.1]: <style>
+2018-06-20T19:53:29.052500+00:00 app[web.1]: </style>
+2018-06-20T19:53:29.052501+00:00 app[web.1]: </head>
+2018-06-20T19:53:29.052502+00:00 app[web.1]: 
+2018-06-20T19:53:29.052504+00:00 app[web.1]: <body>
+2018-06-20T19:53:29.052506+00:00 app[web.1]: <table>
+2018-06-20T19:53:29.052507+00:00 app[web.1]: <tbody>
+2018-06-20T19:53:29.052508+00:00 app[web.1]: <tr>
+2018-06-20T19:53:29.052511+00:00 app[web.1]: <td><p>You have received a new contact form message. The contents of the message are:</p></td>
+2018-06-20T19:53:29.052512+00:00 app[web.1]: </tr>
+2018-06-20T19:53:29.052514+00:00 app[web.1]: <tr>
+2018-06-20T19:53:29.052516+00:00 app[web.1]: <td><p>Retry</p></td>
+2018-06-20T19:53:29.052517+00:00 app[web.1]: </tr>
+2018-06-20T19:53:29.052519+00:00 app[web.1]: </tbody>
+2018-06-20T19:53:29.052521+00:00 app[web.1]: </table>
+2018-06-20T19:53:29.052522+00:00 app[web.1]: 
+2018-06-20T19:53:29.052524+00:00 app[web.1]: </body>
+2018-06-20T19:53:29.052525+00:00 app[web.1]: </html>
+2018-06-20T19:53:29.052527+00:00 app[web.1]: 
+2018-06-20T19:53:29.052724+00:00 app[web.1]: I, [2018-06-20T19:53:29.052654 #4]  INFO -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285] Completed 500 Internal Server Error in 1031ms (ActiveRecord: 0.0ms)
+2018-06-20T19:53:29.053316+00:00 app[web.1]: F, [2018-06-20T19:53:29.053239 #4] FATAL -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285]
+2018-06-20T19:53:29.053389+00:00 app[web.1]: F, [2018-06-20T19:53:29.053302 #4] FATAL -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285] Net::SMTPFatalError (550 Unauthenticated senders not allowed
+2018-06-20T19:53:29.053391+00:00 app[web.1]: ):
+2018-06-20T19:53:29.053447+00:00 app[web.1]: F, [2018-06-20T19:53:29.053377 #4] FATAL -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285]
+2018-06-20T19:53:29.053584+00:00 app[web.1]: F, [2018-06-20T19:53:29.053454 #4] FATAL -- : [d7604e15-fe0c-4814-9ddb-da9cb1ea5285] app/controllers/simple_pages_controller.rb:20:in `thank_you'
+2018-06-20T19:53:29.625663+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rubber-duck-debug.herokuapp.com request_id=6852470e-47d4-4141-8e28-da0eb7a8646c fwd="87.195.247.169" dyno=web.1 connect=0ms service=2ms status=200 bytes=143 protocol=https
