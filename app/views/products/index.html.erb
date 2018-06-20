@@ -3,10 +3,10 @@
 <!-- < % = @test_variable % > -->
 <h1>Rubber Ducks</h1>
 
-<%= form_with(id: 'product_search', url: products_path, method: 'get', local: true) do |form| %>
+<%= form_with(id: 'product_search_form', url: products_path, method: 'get', local: true) do |form| %>
   <!-- < % = form.label :q, 'Search for:' % > -->
   <%= form.text_field :q, id: 'q', value: params[:q] %>
-  <%= form.submit 'Search' %>
+  <%= form.submit 'Search', id: 'product_search_btn' %>
 <% end %>
 
 <!-- ############################################################### -->
