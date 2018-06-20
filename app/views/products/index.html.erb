@@ -1,7 +1,13 @@
 <p id="notice"><%= notice %></p>
 
- <!-- < % = @test_variable % > -->
+<!-- < % = @test_variable % > -->
 <h1>Rubber Ducks</h1>
+
+<%= form_with(id: 'product_search', url: products_path, method: 'get', local: true) do |form| %>
+  <!-- < % = form.label :q, 'Search for:' % > -->
+  <%= form.text_field :q, id: 'q', value: params[:q] %>
+  <%= form.submit 'Search' %>
+<% end %>
 
 <!-- ############################################################### -->
 <!-- ############################################################### -->

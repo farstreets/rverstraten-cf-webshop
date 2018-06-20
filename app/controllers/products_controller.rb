@@ -8,11 +8,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    # Get an array of all products from the database
-    @products = Product.all
-    # @products = Product.limit(3)
-    # render layout: "products"
-    @test_variable = 42
+    if params[:q]
+      search_term = params[:q]
+      # Search was defined in the model file 'product.rb':
+      @products = Product.search(search_term)
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
