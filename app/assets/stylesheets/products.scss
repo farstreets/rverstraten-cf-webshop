@@ -48,6 +48,18 @@
   width: 100%;
 }
 
+.product-search_field {
+  display: inline-block;
+  width: 250px;
+  margin-top: -10px;
+}
+#product_search_btn {
+  margin-top: 3px;
+  // line-height: 0.9;
+  // padding-top: 10px;
+  // padding-bottom: 0;
+}
+
 .product_aspect_ratio_outer_2 {
   position: relative;
   width: 100%;

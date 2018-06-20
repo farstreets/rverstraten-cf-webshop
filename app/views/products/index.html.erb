@@ -5,8 +5,12 @@
 
 <%= form_with(id: 'product_search_form', url: products_path, method: 'get', local: true) do |form| %>
   <!-- < % = form.label :q, 'Search for:' % > -->
-  <%= form.text_field :q, id: 'q', value: params[:q] %>
-  <%= form.submit 'Search', id: 'product_search_btn' %>
+  <div class="container-fluid">
+    <div class="form-group">
+      <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control product-search_field' %>
+      <%= form.submit 'Search', id: 'product_search_btn', class: 'btn btn-default'  %>
+    </div>
+  </div>
 <% end %>
 
 <!-- ############################################################### -->

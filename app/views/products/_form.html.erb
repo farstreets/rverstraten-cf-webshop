@@ -11,33 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: "products_form_name" %>
-  </div>
+  <div class="container-fluid">
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: "products_form_description" %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: "products_form_name", class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :colour %>
-    <%= form.text_field :colour, id: "products_form_color" %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :description %>
+      <%= form.text_area :description, id: "products_form_description", class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price, id: "products_form_price" %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :colour %>
+      <%= form.text_field :colour, id: "products_form_color", class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: "products_form_image_url" %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :price %>
+      <%= form.text_field :price, id: "products_form_price", class: "form-control" %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :image_url %>
+      <%= form.text_field :image_url, id: "products_form_image_url", class: "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class: "btn btn-default" %>
+    </div>
+
+  </div> <!-- / Container Fluid -->
 
 <% end %>
