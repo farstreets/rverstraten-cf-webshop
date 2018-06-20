@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root 'products#index'
   #root 'simple_pages#index'
   root 'simple_pages#landing_page'
+  post 'simple_pages/thank_you'
   
   resources :products
   resources :orders, only: [:index, :show, :create, :destroy]
