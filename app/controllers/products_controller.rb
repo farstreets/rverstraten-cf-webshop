@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    redirect_back(fallback_location: root_path)
+    # redirect_back(fallback_location: root_path)
   end
 
   # GET /products/new
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    redirect_to('http://youtube.com')
+    # redirect_to('http://youtube.com')
   end
 
   # POST /products
