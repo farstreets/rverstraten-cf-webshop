@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'ruben.verstraten@gmail.com'
+  default from: 'rp.verstraten@gmail.com'
   layout 'mailer'
   # def mailer(user)
   #   @user = user
