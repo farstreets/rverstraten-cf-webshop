@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+<%= javascript_include_tag 'alert_fade.js' %>
+
+<% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert %>
+    <p id="notice" class="alert alert-info"><%= alert %></p>
+<% end %>
 
 <p>
   <strong>First name:</strong>

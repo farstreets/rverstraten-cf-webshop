@@ -1,6 +1,15 @@
 <!-- <%= params[:example_key] %>
 <%= params[:example_key].to_i * 10 %> -->
 
+<%= javascript_include_tag 'alert_fade.js' %>
+
+<% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert %>
+    <p id="notice" class="alert alert-info"><%= alert %></p>
+<% end %>
+
 <h1 id="homepage_title">Intro duck tion</h2>
 
 <p id="homepage_intro">
