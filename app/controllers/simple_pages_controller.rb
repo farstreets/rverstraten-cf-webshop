@@ -18,6 +18,7 @@ class SimplePagesController < ApplicationController
     # subject: "A new contact form message from #{@name}",
     # body: @message).deliver_now
     UserMailer.contact_form(@email, @name, @message).deliver_now
+    redirect_to root_url, notice: "Thank you. We have received your message and will respond as soon as possible."
   end
 
 end
