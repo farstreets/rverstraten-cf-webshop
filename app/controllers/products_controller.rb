@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  # Everyone can see the products (index), but only some can modify
+  before_action :authenticate_user!, :except => [:index]
+
   # The master layout for all product pages can be specified here.
   # To specify different master layouts for the pages:
   # 'render layout ""' within dev for the pages...
