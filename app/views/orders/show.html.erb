@@ -7,6 +7,6 @@
   <!-- <h2>Chat Information</h2> -->
   <p><strong>Chat ID: </strong><%= @order.id %></p>
   <p><strong>Duck Name: </strong><%= @order.product.name %></p>
-  <p><strong>Session Price: </strong><%= number_to_currency(@order.product.price.to_f, unit: "€") %></p>
-  <p><strong>Total Price: </strong><%= number_to_currency(@order.total.to_f, unit: "€") %></p>
+  <p><strong>Session Price: </strong><%= number_to_currency(@order.product.price.to_f, unit: "€") + " (30min.)" %></p>
+  <p><strong>Total Price: </strong><%= number_to_currency(@order.total.to_f, unit: "€") + " (30min.)" %></p>
 </div>

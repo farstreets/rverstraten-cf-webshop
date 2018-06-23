@@ -40,7 +40,7 @@
 
 <p>
   <!-- <strong>Price:</strong> -->
-  <span class="text-overflow"><%= number_to_currency(@product.price, unit: "€") %></span>
+  <span class="text-overflow"><%= number_to_currency(@product.price, unit: "€") + " (30min.)" %></span>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
