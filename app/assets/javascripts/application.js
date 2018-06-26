@@ -16,6 +16,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require jquery.raty.js
 //= require_tree .
 
 // The following was in my project that worked:

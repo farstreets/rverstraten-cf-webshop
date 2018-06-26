@@ -21,4 +21,9 @@ class Product < ApplicationRecord
     comments.rating_desc.last
   end
 
+  # Called by <%= @product.average_rating %>
+  def average_rating
+    comments.average(:rating).to_f
+  end
+
 end

@@ -10,7 +10,7 @@
           <%= link_to order.product.name, order %>
         </h2>
         <p><%= order.product.description %></p>
-        <strong><%= number_to_currency(order.product.price, unit: "€") %></strong>
+        <strong><%= number_to_currency(order.product.price, unit: "€") + " (30min.)" %></strong>
       </div><!-- /col -->
     <% end %>
   </div>

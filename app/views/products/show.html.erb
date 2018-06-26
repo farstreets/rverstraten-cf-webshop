@@ -47,3 +47,12 @@
 <%= link_to 'Back', products_path %>
 
 <div class="product-show-bottom-spacing"></div>
+
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+
+<div class="product-show-bottom-spacing"></div>
+
+<%= render 'new_comment' %>
+<%= render 'comments' %>
+
+<div class="product-show-bottom-spacing"></div>
