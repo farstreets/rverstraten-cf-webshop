@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   has_many :orders
+  has_many :comments
   def self.search(search_term)
     if Rails.env.development?
       # Dev Mode (sqlite3)
@@ -9,4 +10,15 @@ class Product < ApplicationRecord
       Product.where("name ilike ?", "%#{search_term}%")
     end
   end
+
+  # Called by <%= @product.highest_rating_comment %>
+  def highest_rating_comment
+    comments.rating_desc.first
+  end
+
+  # Called by <%= @product.lowest_rating_comment %>
+  def lowest_rating_comment
+    comments.rating_desc.last
+  end
+
 end
