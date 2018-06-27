@@ -14,11 +14,10 @@ class Ability
       # cann :manage, Comment, Comment.where(:user_id => user.id) do |comment|
       #   comment.user_id == user.id
       # end
-      can :manage, Comment.where(user_id: user.id)
-      # do |comment|
+      # can :manage, Comment.where(user_id: user.id) do |comment|
       #   comment.user_id == user.id
       # end
-      cannot :delete, Comment.where(user_id: user.id)
+      # cannot :delete, Comment.where(user_id: user.id)
       # do |product_comment|
       #   comment.user_id == user.id
       # end
@@ -28,6 +27,17 @@ class Ability
       # can [:update, :show, :edit], @comment, user_id: user.id
       # cannot [:destroy, :delete], @comment, user_id: user.id
       # @comment = Comment.find(params[:id])
+
+      # can :manage, Comment, user_id: user.id
+      # cannot :destroy, Comment
+
+      can :manage, Comment.where(user_id: user.id) do |comment|
+        comment.user_id == user.id
+      end
+      cannot [:destroy, :delete], Comment.where(user_id: user.id) do |comment|
+        comment.user_id == user.id
+      end
+
     end
 
     # Define abilities for the passed in user here. For example:
