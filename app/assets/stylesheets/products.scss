@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Color variables
+$black: #111111;
+$yellow: #FFDC0E;
+$light_yellow: #FFFFEB;
+$light_grey: #EEEEEE;
+
 .table {
   table-layout: fixed;
 }
@@ -151,4 +157,59 @@
 
 #order_item:last-child {
   padding-bottom: 60px;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// Pagination styling (product show page)
+// http://railscasts.com/episodes/51-will-paginate-revised?view=asciicast
+// https://www.youtube.com/watch?v=MIf1ojX2AGY
+/////////////////////////////////////////////////////////////////////////
+
+.pagination {
+  background: white;
+  cursor: default;
+  height: 22px;
+  a, span, em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
+  }
+  .disabled {
+    display: none;
+    color: #444444;
+    border: 1px solid #444444;
+    background: $light_grey;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background: $yellow;
+    color: $black;
+    border: 1px solid $black;
+  }
+  a {
+    text-decoration: none;
+    color: $black;
+    border: 1px solid $black;
+    background: $light_yellow;
+    &:hover, &:focus {
+      color: $black;
+      border-color: $black;
+      background: $yellow;
+    }
+  }
+  // .page_info {
+  //   background: #2e6ab1;
+  //   color: white;
+  //   padding: 0.4em 0.6em;
+  //   width: 22em;
+  //   margin-bottom: 0.3em;
+  //   text-align: center;
+  //   b {
+  //     color: #000033;
+  //     background: #2e6ab1 + 60;
+  //     padding: 0.1em 0.25em;
+  //   }
+  // }
 }

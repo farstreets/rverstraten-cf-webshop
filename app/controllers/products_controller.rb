@@ -24,7 +24,8 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     # redirect_back(fallback_location: root_path)
-    @comments = @product.comments.order("created_at DESC")
+    # Info about will_paginate : https://www.youtube.com/watch?v=MIf1ojX2AGY
+    @comments = @product.comments.order("created_at DESC").page(params[:page]).per_page(3)
   end
 
   # GET /products/new
