@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     product = @comment.product
     @comment.destroy
-    redirect_to product, notice: "The comment was successfully destroyed."
+    redirect_to product, notice: "The comment was successfully removed."
   end
 
   private
