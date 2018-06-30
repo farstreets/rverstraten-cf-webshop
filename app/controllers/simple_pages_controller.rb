@@ -9,6 +9,14 @@ class SimplePagesController < ApplicationController
     @products = Product.limit(5)
   end
 
+  def debug_session
+    @product = Product.find(params[:id])
+    # @featured_product = Product.first
+    # @products = Product.all
+    # @products = Product.limit(5)
+    # notice: "Good luck!"
+  end
+
   def thank_you
     @name = params[:name]
     @email = params[:email]

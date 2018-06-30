@@ -13,7 +13,7 @@
 <h1 id="homepage_title">Intro duck tion</h2>
 
 <p id="homepage_intro">
-  Are you a programmer that is stuck with a coding problem? You have come to the right place! Book your chat with a rubber duck now! You will find that explaining the bug out loud will help you understand and solve your bugs! You can talk to many different ducks, which all have their specific mentoring qualities. Don't be a stranger!
+  Are you a programmer that is stuck with a coding problem? You have come to the right place! Book your chat with a rubber duck now! You will find that explaining the bug out loud will help you understand and solve it! You can talk to many different ducks, which all have their specific mentoring qualities. Don't be a stranger!
 </p>
 
 <!-- ********************** -->
@@ -32,14 +32,14 @@
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <% $cnt = 0 %>
+        <% @cnt = 0 %>
         <% @products.each do |product| %>
-          <% if ($cnt == 0) %>
+          <% if (@cnt == 0) %>
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <% else %>
-            <li data-target="#carousel-example-generic" data-slide-to="<%= "#{$cnt}" %>"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="<%= "#{@cnt}" %>"></li>
           <% end %>
-          <% $cnt += 1 %>
+          <% @cnt += 1 %>
         <% end %>
       </ol>
       <!-- Wrapper for slides -->

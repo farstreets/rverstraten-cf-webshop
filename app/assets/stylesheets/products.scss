@@ -3,10 +3,51 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // Color variables
-$black: #111111;
+$black: #333333;
 $yellow: #FFDC0E;
 $light_yellow: #FFFFEB;
+$middle_yellow: #FEFAE2;
 $light_grey: #EEEEEE;
+
+// Button and Form-input variables
+$btn_height: 46px;
+$btn_font_size: 0.8em;
+
+// Content width wrapper div
+.content_width_wrapper {
+  display: block;
+  margin: 0 auto;
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .content_width_wrapper {
+    width: 100%;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .content_width_wrapper {
+    width: 60%;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .content_width_wrapper {
+    width: 50%;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .content_width_wrapper {
+    width: 50%;
+  }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .content_width_wrapper {
+    width: 50%;
+  }
+}
 
 .table {
   table-layout: fixed;
@@ -32,9 +73,25 @@ $light_grey: #EEEEEE;
   padding-top: 60px;
 }
 
+// The following specificity is need to win from "#body_wrapper h1"
+#body_wrapper #product_show_title {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+#product_show_description {
+  margin-bottom: 25px;
+}
+
+#product_show_price {
+  padding-top: 25px;
+}
+
 #products_form_name {
   width: 100%;
 }
+
+
 
 #products_form_description {
   width: 100%;
@@ -54,16 +111,21 @@ $light_grey: #EEEEEE;
   width: 100%;
 }
 
-.product-search_field {
+.product_search_field {
   display: inline-block;
   width: 250px;
-  margin-top: -10px;
+  margin-top: 10px;
+  padding-top: 8px;
+  font-size: $btn_font_size;
+  height: $btn_height;
 }
 #product_search_btn {
-  margin-top: 3px;
+  margin-top: 1px;
   // line-height: 0.9;
-  // padding-top: 10px;
+  padding-top: 13px;
   // padding-bottom: 0;
+  font-size: $btn_font_size;
+  height: $btn_height;
 }
 
 #product_index_show {
@@ -94,37 +156,37 @@ $light_grey: #EEEEEE;
 
 #product_show_page_show {
   display: block;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
 }
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   #product_show_page_show {
-    width: 100%;
+    width: 90%;
   }
 }
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {
   #product_show_page_show {
-    width: 60%;
+    width: 80%;
   }
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
   #product_show_page_show {
-    width: 50%;
+    width: 70%;
   }
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
   #product_show_page_show {
-    width: 40%;
+    width: 60%;
   }
 }
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   #product_show_page_show {
-    width: 30%;
+    width: 50%;
   }
 }
 
@@ -152,6 +214,44 @@ $light_grey: #EEEEEE;
 }
 
 /////////////////////////////////////////////////////////////////////////
+// Product show - Comments/Reviews stylings
+/////////////////////////////////////////////////////////////////////////
+
+#add_review_div_around {
+  // background: $light_yellow;
+  // background: linear-gradient(0.45turn, #ffec81, #fffaca);
+  // background: linear-gradient(to right, $black, #ffec81, $black);
+  background-color: rgba($light_yellow, 0.2);
+  border: solid;
+  border-color: $black;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: 5px;
+  box-shadow: 0 0 50px $yellow;
+}
+
+#showproduct_newcommentbody {
+  background-color: rgba(white, 1);
+  resize: none;
+  // background-color: white;
+  border: solid;
+  border-color: $black;
+  border-width: 2px;
+  width: calc(100% - 20px);
+  display: block;
+  margin: 15px 10px 0 10px;
+  font-size: $btn_font_size;
+}
+
+#review_label {
+  padding-top: 10px;
+}
+
+.comment-delete {
+  color: red;
+}
+
+/////////////////////////////////////////////////////////////////////////
 // Order page
 /////////////////////////////////////////////////////////////////////////
 
@@ -166,11 +266,11 @@ $light_grey: #EEEEEE;
 /////////////////////////////////////////////////////////////////////////
 
 .pagination {
-  background: white;
+  background: $light_yellow;
   cursor: default;
   height: 22px;
   a, span, em {
-    padding: 0.2em 0.5em;
+    padding: 0.4em 0.5em 0.2em 0.5em;
     display: block;
     float: left;
     margin-right: 1px;
@@ -184,19 +284,20 @@ $light_grey: #EEEEEE;
   .current {
     font-style: normal;
     font-weight: bold;
-    background: $yellow;
-    color: $black;
+    background: black;
+    color: $yellow;
     border: 1px solid $black;
+    // box-shadow: 0 0 20px $yellow;
   }
   a {
     text-decoration: none;
-    color: $black;
+    color: $yellow;
     border: 1px solid $black;
-    background: $light_yellow;
+    background: $black;
     &:hover, &:focus {
-      color: $black;
+      color: $yellow;
       border-color: $black;
-      background: $yellow;
+      background: black;
     }
   }
   // .page_info {
@@ -212,8 +313,4 @@ $light_grey: #EEEEEE;
   //     padding: 0.1em 0.25em;
   //   }
   // }
-}
-
-.comment-delete {
-  color: red;
 }

@@ -1,22 +1,56 @@
 <nav>
   <div id="centerDiv">
     <ul class="centerUL">
-      <li><%= link_to image_tag("favicon.png",
+      <li>
+        <!-- < % = link_to image_tag("favicon.png",
         id: "icon_navbar",
         class: "img-responsive",
-        alt: "Icon"), root_path %></li>
+        alt: "Icon"), root_path % > -->
+        <%= link_to root_path do %>
+          <span class="glyphicon glyphicon-home"></span>
+        <% end %>
+      </li>
       <!-- <li><%= link_to "About", simple_pages_about_path %></li> -->
-      <li><%= link_to "Ducks", products_path %></li>
-      <li><%= link_to "Chats", orders_path %></li>
-      <li><%= link_to "Contact", simple_pages_contact_path %></li>
-      <li><%= link_to "Users", users_path %></li>
+      <li>
+        <!-- < % = link_to "Ducks", products_path % > -->
+        <%= link_to image_tag("duck_icon.png",
+          id: "duck_navbar",
+          class: "img-responsive",
+          alt: "Icon"), products_path %></li>
+      </li>
+      <li>
+        <%= link_to orders_path do %>
+          <span class="glyphicon glyphicon-comment"></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to simple_pages_contact_path do %>
+          <span class="glyphicon glyphicon-envelope"></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to users_path do %>
+          <span class="glyphicon glyphicon-user"></span>
+        <% end %>
+      </li>
       <li>
       <% if user_signed_in? %>
-        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        <!-- < % = link_to('Logout', destroy_user_session_path, method: :delete) % > -->
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <span class="glyphicon glyphicon-log-out"></span>
+        <% end %>
       <% else %>
-        <%= link_to('Login', new_user_session_path) %>
+        <%= link_to new_user_session_path do %>
+          <span class="glyphicon glyphicon-log-in"></span>
+        <% end %>
       <% end %>
       </li>
+      <!-- <li> -->
+        <!-- < % = link_to '' do % > -->
+          <!-- <span class="glyphicon glyphicon-refresh"></span> -->
+          <!-- <span class="glyphicon glyphicon-menu-hamburger"></span> -->
+        <!-- < % end % > -->
+      <!-- </li> -->
     </ul>
   </div>
 </nav>

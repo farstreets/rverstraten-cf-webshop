@@ -1,17 +1,25 @@
 <% if signed_in? %>
-  <h4>Add a review:</h4>
-  <%= form_for([@product, @product.comments.build]) do |f| %>
-  <p class="form-group">
-    <%= f.label :body, "Comments" %>
-    <%= f.text_area :body, class: "form-control" %>
-  </p>
 
-  <p>
-    <div class="rating"></div>
-  </p>
+  <div id="add_review_div_around">
 
-  <p>
-    <%= f.submit "Submit", class: "btn btn-default" %>
-  </p>
-  <% end %>
+    <!-- <h4>Add a review:</h4> -->
+    <%= form_for([@product, @product.comments.build]) do |f| %>
+    <!-- <p> -->
+      <!-- < % = f.label :body, "Add a quack for \"#{@product.name}\"", id: "review_label" % > -->
+    <!-- </p> -->
+    <p>
+      <%= f.text_area :body, id:"showproduct_newcommentbody", class: "form-control" %>
+    </p>
+
+    <p>
+      <div class="rating"></div>
+    </p>
+
+    <p>
+      <%= f.submit "Quack", class: "btn btn-default" %>
+    </p>
+    <% end %>
+
+  </div> <!-- / id="add_review_txtbox" -->
+
 <% end %>

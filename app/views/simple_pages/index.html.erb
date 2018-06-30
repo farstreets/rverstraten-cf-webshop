@@ -12,11 +12,11 @@ Description : HTML index
 
 <%
   # Products array
-  $products_nr = 40
-  $products = Array.new
+  @products_nr = 40
+  @products = Array.new
 
-  for i in 0..($products_nr-1)
-    $products.push({
+  for i in 0..(@products_nr-1)
+    @products.push({
       image: "http://via.placeholder.com/500x300",
       img_alt: "Img%02d" % [i+1],
       product: "Product%02d" % [i+1],
@@ -30,20 +30,20 @@ Description : HTML index
   <div class="row">
 
     <!-- Loop the products html into the webpage -->
-    <% for i in 0..($products.length-1) %>
+    <% for i in 0..(@products.length-1) %>
 
       <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
         <div class="product_aspect_ratio_outer">
           <div class="product_aspect_ratio_inner">
-            <%= image_tag($products[i][:image],
+            <%= image_tag(@products[i][:image],
               class: "img-responsive product_image",
-              alt: $products[i][:img_alt] )
+              alt: @products[i][:img_alt] )
             %>
             <h3>
-              <%= $products[i][:product] %>
+              <%= @products[i][:product] %>
             </h3>
             <p>
-              <%= $products[i][:info]    %>
+              <%= @products[i][:info]    %>
             </p>
           </div>
         </div>

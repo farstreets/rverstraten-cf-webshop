@@ -7,6 +7,17 @@ Date        : 2018-05-30
 Description : SASS CSS
 */ // end file-header ///////////////////////////////////////////////////
 
+// Color variables
+$black: #333333;
+$yellow: #FFDC0E;
+$light_yellow: #FFFFEB;
+$middle_yellow: #FEFAE2;
+$light_grey: #EEEEEE;
+
+// Button and Form-input variables
+$btn_height: 46px;
+$btn_font_size: 0.8em;
+
 /////////////////////////////////////////////////////////////////////////
 // General
 /////////////////////////////////////////////////////////////////////////
@@ -155,17 +166,17 @@ nav li a:hover {
   text-decoration: none;
 }
 
-nav li:first-child a {
-  padding: 12px 0px 12px 0;
-}
+// nav li:first-child a {
+//   padding: 12px 0px 12px 0;
+// }
+//
+// nav li:first-child a:hover {
+//   padding: 12px 0px 12px 0;
+// }
 
-nav li:first-child a:hover {
-  padding: 12px 0px 12px 0;
-}
-
-#icon_navbar {
-  width: 40px;
-  margin: 0px 10px 0 10px;
+#duck_navbar {
+  width: 22px;
+  margin: 0;
 }
 
 .centerUL {
@@ -188,8 +199,7 @@ nav li:first-child a:hover {
     display: block;
     color: #ffdc0e;
     text-align: center;
-    padding: 16px 8px;
-    padding-top: 20px;
+    padding: 20px 8px 0 8px;
     text-decoration: none;
   }
 
@@ -197,22 +207,21 @@ nav li:first-child a:hover {
     background-color: #111111;
     color: #ffdc0e;
     text-align: center;
-    padding: 16px 8px;
-    padding-top: 20px;
+    padding: 20px 8px 0 8px;
     text-decoration: none;
   }
 
-  nav li:first-child a {
-    padding: 12px 0px 12px 0;
-  }
-
-  nav li:first-child a:hover {
-    padding: 12px 0px 12px 0;
-  }
+  // nav li:first-child a {
+  //   padding: 12px 0 0 0;
+  // }
+  //
+  // nav li:first-child a:hover {
+  //   padding: 12px 0 0 0;
+  // }
 
   #icon_navbar {
     width: 40px;
-    margin: 0px 5px 0 5px;
+    margin: 0px 5px;
   }
 }
 
@@ -222,27 +231,27 @@ nav li:first-child a:hover {
     display: block;
     color: #ffdc0e;
     text-align: center;
-    padding: 16px;
-    padding-top: 20px;
+    padding: 20px 16px 0 16px;
     text-decoration: none;
+    height: 64px;
   }
 
   nav li a:hover {
     background-color: #111111;
     color: #ffdc0e;
     text-align: center;
-    padding: 16px;
-    padding-top: 20px;
+    padding: 20px 16px 0 16px;
     text-decoration: none;
+    height: 64px;
   }
 
-  nav li:first-child a {
-    padding: 12px 0px 12px 0;
-  }
-
-  nav li:first-child a:hover {
-    padding: 12px 0px 12px 0;
-  }
+  // nav li:first-child a {
+  //   padding: 12px 0px 12px 0;
+  // }
+  //
+  // nav li:first-child a:hover {
+  //   padding: 12px 0px 12px 0;
+  // }
 
   #icon_navbar {
     width: 40px;
@@ -308,6 +317,7 @@ nav li:first-child a:hover {
   #homepage_intro {
     padding: 0;
     text-align: center;
+    line-height: 1.7em;
   }
 }
 
@@ -316,6 +326,7 @@ nav li:first-child a:hover {
   #homepage_intro {
     padding: 0 20%;
     text-align: center;
+    line-height: 1.7em;
   }
 }
 
@@ -391,4 +402,28 @@ nav li:first-child a:hover {
     padding-bottom: 40%;
     margin: 60px 20% 80px 20%;
   }
+}
+
+.contact-page-bottom-spacing {
+  padding-top: 80px;
+}
+
+.contact_name_input {
+  // line-height: $btn_height !important;
+  font-size: $btn_font_size;
+  height: $btn_height;
+  padding-top: 7px;
+}
+
+.contact_email_input {
+  font-size: $btn_font_size;
+  height: $btn_height;
+  padding-top: 7px;
+}
+
+.contact_msg_body_txtarea {
+  resize: none;
+  // line-height: $btn_height !important;
+  font-size: $btn_font_size !important;
+  padding-top: 15px;
 }

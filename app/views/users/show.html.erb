@@ -7,6 +7,8 @@
     <p id="notice" class="alert alert-info"><%= alert %></p>
 <% end %>
 
+<h1>User Name</h1>
+
 <p>
   <strong>First name:</strong>
   <%= @user.first_name %>
@@ -17,5 +19,9 @@
   <%= @user.last_name %>
 </p>
 
+<br>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<br><br><br>

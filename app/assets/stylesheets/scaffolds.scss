@@ -1,4 +1,15 @@
 
+// Color variables
+$black: #333333;
+$yellow: #FFDC0E;
+$light_yellow: #FFFFEB;
+$middle_yellow: #FEFAE2;
+$light_grey: #EEEEEE;
+
+// Button and Form-input variables
+$btn_height: 46px;
+$btn_font_size: 0.8em;
+
 body {
   background: image-url('bg_matrix_duck.png');
   background-color: #FFFFEB;
@@ -10,16 +21,69 @@ body {
   text-align: center;
 }
 
+// Default single line form input stylings
+.form_single_line_input {
+  padding-top: 10px;
+  font-size: $btn_font_size;
+  height: $btn_height;
+}
+.form_multi_line_input {
+  padding-top: 15px;
+  font-size: $btn_font_size;
+  // line-height: $btn_height;
+}
+
 .container-fluid {
   margin: 0;
   padding: 0;
 }
 
 .btn-default {
-  // background-color: #ffdc0e;
-  // color: #333333;
-  // color: #ffdc0e;
-  // background-color: #333333;
+  background-color: $black !important;
+  border-color: $black;
+  color: $yellow;
+  padding-top: 9px;
+  font-size: $btn_font_size;
+  outline: none;
+  height: $btn_height;
+}
+.btn-default:hover {
+  background-color: black !important;
+  border-color: $black;
+  color: $yellow;
+  outline: none;
+  box-shadow: 0 0 20px $yellow;
+  height: $btn_height;
+}
+.btn-default:active {
+  background-color: $black !important;
+  border-color: $black;
+  color: $yellow;
+  outline: none;
+  height: $btn_height;
+}
+.btn-default:hover:active {
+  background-color: $black !important;
+  border-color: $black;
+  color: $yellow;
+  outline: none;
+  height: $btn_height;
+}
+.btn-default:focus {
+  background-color: $black !important;
+  border-color: $black;
+  color: $yellow;
+  outline: none;
+  height: $btn_height;
+}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+  background-color: $black !important;
+  border-color: $black;
+  color: $yellow;
+  padding-top: 9px;
+  font-size: 0.8em;
+  outline: none;
+  height: $btn_height;
 }
 
 // p, ol, ul, td {

@@ -9,28 +9,37 @@
 
 <h1>Users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="content_width_wrapper">
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <hr>
+  <% @users.each do |user| %>
+    <p>
+      <span>
+        <% if (user.first_name == nil) %>
+          <%= "?" %>
+        <% else %>
+          <%= user.first_name %>
+        <% end %>
+      </span>
+      <span>
+        <% if (user.last_name == nil) %>
+          <%= "?" %>
+        <% else %>
+          <%= user.last_name %>
+        <% end %>
+      </span>
+      <br>
+      <%= link_to 'Show', user %>
+      <%= link_to 'Edit', edit_user_path(user) %>
+      <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+    <hr>
+  <% end %>
 
-<br>
+  <br>
 
-<%= link_to 'New User', new_user_path %>
+  <%= link_to 'New User', new_user_path %>
+
+  <br><br><br>
+
+</div>
