@@ -427,3 +427,21 @@ nav li a:hover {
   font-size: $btn_font_size !important;
   padding-top: 15px;
 }
+
+/////////////////////////////////////////////////////////////////////////
+// Session page
+/////////////////////////////////////////////////////////////////////////
+
+// The following specificity is need to win from "#body_wrapper h1"
+#body_wrapper #session_show_title {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+#session_show_description {
+  margin-bottom: 10px;
+}
+
+#session_feedback_btn {
+  padding-top: 13px;
+}

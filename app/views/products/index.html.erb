@@ -53,7 +53,7 @@
               <%= number_to_currency(product.price, unit: "€") + " (30min.)" %>
             </p>
             <p>
-              <%= link_to 'Book', simple_pages_debug_session_path(id: product.id), data: { confirm: 'Ready to start your session?' } %>
+              <%= link_to 'Book', simple_pages_debug_session_path(id: product.id) %>
               <%= link_to 'Show', product %>
               <%= link_to 'Edit', edit_product_path(product) %>
               <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
