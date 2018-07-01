@@ -49,8 +49,11 @@
     <span id="product_show_price" class="text-overflow"><%= number_to_currency(@product.price, unit: "€") + " (30min.)" %></span>
   </p>
 
-  <%= link_to 'Book', simple_pages_debug_session_path(id: @product.id) %> |
-  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <% if (signed_in? && current_user.admin?) %>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+  <% else %>
+    <%= link_to 'Book', simple_pages_debug_session_path(id: @product.id) %> |
+  <% end %>
   <%= link_to 'Back', products_path %>
 
   <div class="product-show-bottom-spacing"></div>

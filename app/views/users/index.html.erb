@@ -7,33 +7,39 @@
     <p id="notice" class="alert alert-info"><%= alert %></p>
 <% end %>
 
-<h1>Users</h1>
+<% if current_user.admin? %>
+  <h1>Users</h1>
+<% else %>
+ <h1>User</h1>
+<% end %>
 
 <div class="content_width_wrapper">
 
   <hr>
   <% @users.each do |user| %>
-    <p>
-      <span>
-        <% if (user.first_name == nil) %>
-          <%= "?" %>
-        <% else %>
-          <%= user.first_name %>
-        <% end %>
-      </span>
-      <span>
-        <% if (user.last_name == nil) %>
-          <%= "?" %>
-        <% else %>
-          <%= user.last_name %>
-        <% end %>
-      </span>
-      <br>
-      <%= link_to 'Show', user %>
-      <%= link_to 'Edit', edit_user_path(user) %>
-      <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </p>
-    <hr>
+    <% if (current_user.admin? || (current_user.id == user.id)) %>
+      <p>
+        <span>
+          <% if (user.first_name == nil) %>
+            <%= "?" %>
+          <% else %>
+            <%= user.first_name %>
+          <% end %>
+        </span>
+        <span>
+          <% if (user.last_name == nil) %>
+            <%= "?" %>
+          <% else %>
+            <%= user.last_name %>
+          <% end %>
+        </span>
+        <br>
+        <%= link_to 'Show', user %>
+        <%= link_to 'Edit', edit_user_path(user) %>
+        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+      <hr>
+    <% end %>
   <% end %>
 
   <br>

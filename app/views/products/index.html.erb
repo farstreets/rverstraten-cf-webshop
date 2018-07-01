@@ -27,7 +27,11 @@
 <!-- ############################################################### -->
 <!-- ############################################################### -->
 
-<%= link_to 'New Duck', new_product_path %>
+<% if (signed_in? && current_user.admin?) %>
+  <%= link_to 'New Duck', new_product_path %>
+<% else %>
+  <!-- <br> -->
+<% end %>
 
 <!-- Responsive row -->
 <div id="product_index_show" class="container-fluid">
@@ -53,10 +57,16 @@
               <%= number_to_currency(product.price, unit: "€") + " (30min.)" %>
             </p>
             <p>
-              <%= link_to 'Book', simple_pages_debug_session_path(id: product.id) %>
-              <%= link_to 'Show', product %>
-              <%= link_to 'Edit', edit_product_path(product) %>
-              <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% if (signed_in? && current_user.admin?) %>
+                <%= link_to 'Show', product %>
+                <%= link_to 'Edit', edit_product_path(product) %>
+                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% else %>
+                <% if signed_in? %>
+                  <%= link_to 'Book', simple_pages_debug_session_path(id: product.id) %>
+                <% end %>
+                <%= link_to 'Show', product %>
+              <% end %>
             </p>
           </div>
         </div>
@@ -112,7 +122,10 @@
 <!-- </table> -->
 <!-- <a href="/products/2/edit">Edit</a> -->
 <!-- <br> -->
+<% if (signed_in? && current_user.admin?) %>
+  <%= link_to 'New Duck', new_product_path %>
+  <br><br><br>
+<% end %>
 
-<%= link_to 'New Duck', new_product_path %>
-
-<div class="product-main-bottom-spacing"></div>
+<br>
+<!-- <div class="product-main-bottom-spacing"></div> -->
