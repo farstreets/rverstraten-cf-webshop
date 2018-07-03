@@ -35,7 +35,6 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    # redirect_to('http://youtube.com')
   end
 
   # POST /products

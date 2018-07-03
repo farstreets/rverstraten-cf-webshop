@@ -11,9 +11,6 @@ class SimplePagesController < ApplicationController
 
   def debug_session
     @product = Product.find(params[:id])
-    # @featured_product = Product.first
-    # @products = Product.all
-    # @products = Product.limit(5)
     # notice: "Good luck!"
   end
 

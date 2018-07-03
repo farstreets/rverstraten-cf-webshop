@@ -8,7 +8,6 @@ class OrdersController < ApplicationController
   end
 
   def show
-    # redirect_to('www.youtube.com')
     # redirect_to(:controller => 'simple_pages', :action => 'landing_page')
     @order = Order.find(params[:id])
   end

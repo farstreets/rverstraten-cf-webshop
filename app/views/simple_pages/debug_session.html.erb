@@ -9,7 +9,6 @@
 
 <div class="content_width_wrapper">
 
-  <!-- <br> -->
   <h1 id="session_show_title">Debug Session</h1>
 
   <!-- <h1 id="product_show_title"><%= @product.name %></h1> -->
@@ -29,6 +28,25 @@
       </div>
     </div>
   </div>
+
+
+  <script>
+    // Reload the current page only once.
+    // This has to be done because this javascript does not reload properly,
+    // when returning to this page. The js-down-counter goes a second per second
+    // faster every time when returning to this debug-session page...
+    // (Probably because of the turbolinks)?
+    $(document).ready(function(){
+      //Check if the current URL contains '#'
+      if(document.URL.indexOf("#")==-1){
+        // Set the URL to whatever it was plus "#".
+        url = document.URL+"#";
+        location = "#";
+        //Reload the page
+        location.reload(true);
+      }
+    });
+  </script>
 
   <div id="some_div">30:00</div>
 

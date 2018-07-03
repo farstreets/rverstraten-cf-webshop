@@ -264,17 +264,17 @@ nav li a:hover {
 // Landing page
 /////////////////////////////////////////////////////////////////////////
 
-#carousel-example-generic {
-  // width: 25%;
-  margin: 40px auto 70px auto;
-}
-
 .carousel-control.right {
   background-image: none;
 }
 
 .carousel-control.left {
   background-image: none;
+}
+
+#carousel-example-generic {
+  // width: 25%;
+  margin: 40px auto 70px auto;
 }
 
 // Extra small devices (portrait phones, less than 576px)
@@ -287,28 +287,28 @@ nav li a:hover {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {
   #carousel-example-generic {
-    width: 65%;
+    width: 55%;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
   #carousel-example-generic {
-    width: 55%;
+    width: 45%;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
   #carousel-example-generic {
-    width: 45%;
+    width: 35%;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   #carousel-example-generic {
-    width: 35%;
+    width: 25%;
   }
 }
 
