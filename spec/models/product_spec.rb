@@ -1,6 +1,25 @@
+################################################################
+# Validates from the model
+################################################################
+# validates :name, presence: true
+################################################################
+
 require 'rails_helper'
 
 describe Product do
+
+  ########################################################
+  # Product validation tests
+  ########################################################
+  context "validation ->" do
+    it "all good -> valid" do
+      expect(Product.new(name: "Nice bike")).to be_valid
+    end
+
+    it "no name -> not valid" do
+      expect(Product.new(description: "Nice bike")).not_to be_valid
+    end
+  end
 
   ########################################################
   # Product name tests
@@ -13,29 +32,14 @@ describe Product do
     end
 
     it "not equal to" do
-      expect(product.name).to_not eq "racebike"
-    end
-
-    it "missing -> product not valid" do
-      expect(Product.new(description: "Nice bike")).to_not be_valid
+      expect(product.name).not_to eq "racebike"
     end
   end
 
   ########################################################
-  # Product no-name tests
+  # Product average rating tests
   ########################################################
-  context "no-name ->" do
-    let(:product) { Product.new(description: "Nice bike") }
-
-    it "product not valid" do
-      expect(product).to_not be_valid
-    end
-  end
-
-  ########################################################
-  # Product comments average rating tests
-  ########################################################
-  context "comments average rating ->" do
+  context "average rating ->" do
     let(:product) { Product.create!(name: "race bike") }
     let(:user) { User.create!(email: "user1@gmail.com", password: "user1pw") }
     before do
@@ -49,8 +53,8 @@ describe Product do
     end
 
     it "not equal to" do
-      expect(product.average_rating).to_not eq 4
+      expect(product.average_rating).not_to eq 4
     end
-  end
 
+  end
 end
