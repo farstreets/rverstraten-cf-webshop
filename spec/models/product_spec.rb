@@ -42,7 +42,7 @@ describe Product do
   context "average rating ->" do
     let(:product) { Product.create!(name: "race bike") }
     let(:user) { User.create!(email: "user1@gmail.com", password: "user1pw") }
-    before do
+    before(:each) do
       product.comments.create!(rating: 1, user: user, body: "Awful bike!")
       product.comments.create!(rating: 3, user: user, body: "Ok bike!")
       product.comments.create!(rating: 5, user: user, body: "Great bike!")

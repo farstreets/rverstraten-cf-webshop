@@ -43,8 +43,12 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  # RSpec - Testing Framework for Ruby
+  # RSpec - Testing Framework (Unit Tests)
   gem 'rspec-rails', '~> 3.7'
+  # Controller Testing Framework (Functional Tests)
+  gem 'rails-controller-testing'
+  # Testing pop-up windows
+  gem 'capybara'
 end
 
 group :development do
