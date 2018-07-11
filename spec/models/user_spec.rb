@@ -16,36 +16,28 @@ describe User do
   context "validation ->" do
 
     it "all good -> valid" do
-      expect(User.new(
-        email: "user1@gmail.com",
-        password: "user1pw"
-      )).to be_valid
+      @user = FactoryBot.build(:random_user)
+      expect(@user).to be_valid
     end
 
     it "no email -> not valid" do
-      expect(User.new(
-        password: "user1pw"
-      )).not_to be_valid
+      @user = FactoryBot.build(:random_user, email: nil)
+      expect(@user).not_to be_valid
     end
 
     it "no password -> not valid" do
-      expect(User.new(
-        email: "user1@gmail.com"
-      )).not_to be_valid
+      @user = FactoryBot.build(:random_user, password: nil)
+      expect(@user).not_to be_valid
     end
 
     it "bad email format 1 -> not valid" do
-      expect(User.new(
-        email: "user1gmail.com",
-        password: "user1pw"
-      )).not_to be_valid
+      @user = FactoryBot.build(:random_user, email: "user-email.com")
+      expect(@user).not_to be_valid
     end
 
     it "bad email format 2 -> not valid" do
-      expect(User.new(
-        email: "user1@gmailcom",
-        password: "user1pw"
-      )).not_to be_valid
+      @user = FactoryBot.build(:random_user, email: "user@email-com")
+      expect(@user).not_to be_valid
     end
 
   end

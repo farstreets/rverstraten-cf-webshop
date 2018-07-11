@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 describe OrdersController, type: :controller do
-  let(:user1) { User.create!(email: "user1@example.com", password: "user1pw", admin: true) }
-  let(:user2) { User.create!(email: "user2@example.com", password: "user2pw") }
+
+  before(:each) do
+    @admin = FactoryBot.create(:random_user, admin: true)
+    @user = FactoryBot.create(:random_user)
+  end
 
   ########################################################
   # Test: Get the orders/chats index page
@@ -18,7 +21,7 @@ describe OrdersController, type: :controller do
 
     context 'admin signed in ->' do
       it "all good" do
-        sign_in user1
+        sign_in @admin
         get :index
         expect(response).to be_ok
       end
@@ -26,7 +29,7 @@ describe OrdersController, type: :controller do
 
     context 'non-admin signed in ->' do
       it "redirect home + flash alert" do
-        sign_in user2
+        sign_in @user
         get :index
         expect(response).to be_ok
         # expect(response).to redirect_to(root_path)

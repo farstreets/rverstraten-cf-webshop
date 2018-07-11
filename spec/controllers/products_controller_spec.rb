@@ -1,10 +1,13 @@
 require 'rails_helper'
 
 describe ProductsController, type: :controller do
-  let(:product) { Product.create!(name: "race bike") }
-  let(:user1) { User.create!(email: "user1@example.com", password: "user1pw", admin: true) }
-  let(:user2) { User.create!(email: "user2@example.com", password: "user2pw") }
 
+  before(:each) do
+    @admin = FactoryBot.create(:random_user, admin: true)
+    @user = FactoryBot.create(:random_user)
+    @product = FactoryBot.create(:random_product)
+  end
+  
   ########################################################
   # Test: Get the products INDEX page
   ########################################################
@@ -19,7 +22,7 @@ describe ProductsController, type: :controller do
 
     context 'admin signed in ->' do
       it "all good" do
-        sign_in user1
+        sign_in @admin
         get :index
         expect(response).to be_ok
       end
@@ -27,7 +30,7 @@ describe ProductsController, type: :controller do
 
     context 'non-admin signed in ->' do
       it "all good" do
-        sign_in user2
+        sign_in @user
         get :index
         expect(response).to be_ok
       end
@@ -42,23 +45,23 @@ describe ProductsController, type: :controller do
 
     context 'not logged in ->' do
       it 'redirect to login' do
-        get :show, params: { id: product.id }
+        get :show, params: { id: @product.id }
         expect(response).to redirect_to(new_user_session_path)
       end
     end
 
     context 'admin signed in ->' do
       it "all good" do
-        sign_in user1
-        get :show, params: { id: product.id }
+        sign_in @admin
+        get :show, params: { id: @product.id }
         expect(response).to be_ok
       end
     end
 
     context 'non-admin signed in ->' do
       it "all good" do
-        sign_in user2
-        get :show, params: { id: product.id }
+        sign_in @user
+        get :show, params: { id: @product.id }
         expect(response).to be_ok
       end
     end
@@ -72,23 +75,23 @@ describe ProductsController, type: :controller do
 
     context 'not logged in ->' do
       it 'redirect to login' do
-        get :edit, params: { id: product.id }
+        get :edit, params: { id: @product.id }
         expect(response).to redirect_to(new_user_session_path)
       end
     end
 
     context 'admin signed in ->' do
       it "all good" do
-        sign_in user1
-        get :edit, params: { id: product.id }
+        sign_in @admin
+        get :edit, params: { id: @product.id }
         expect(response).to be_ok
       end
     end
 
     context 'non-admin signed in ->' do
       it "all good" do
-        sign_in user2
-        get :edit, params: { id: product.id }
+        sign_in @user
+        get :edit, params: { id: @product.id }
         expect(response).to be_ok
         # expect(response).to redirect_to(root_path)
         # expect(flash[:alert]).to be_present
@@ -105,15 +108,15 @@ describe ProductsController, type: :controller do
 
     context 'not logged in ->' do
       it 'redirect to login' do
-        delete :destroy, params: { id: product.id }
+        delete :destroy, params: { id: @product.id }
         expect(response).to redirect_to(new_user_session_path)
       end
     end
 
     context 'admin signed in ->' do
       it "all good" do
-        sign_in user1
-        delete :destroy, params: { id: product.id }
+        sign_in @admin
+        delete :destroy, params: { id: @product.id }
         expect(response.body).to have_content("You are being redirected.")
         # expect(response.body).to have_content("Are you sure?")
       end
@@ -121,8 +124,8 @@ describe ProductsController, type: :controller do
 
     context 'non-admin signed in ->' do
       it "all good" do
-        sign_in user2
-        delete :destroy, params: { id: product.id }
+        sign_in @user
+        delete :destroy, params: { id: @product.id }
         expect(response.body).to have_content("You are being redirected.")
         # expect(response).to redirect_to(root_path)
         # expect(flash[:alert]).to be_present

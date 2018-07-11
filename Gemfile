@@ -49,6 +49,9 @@ group :development, :test do
   gem 'rails-controller-testing'
   # Testing pop-up windows
   gem 'capybara'
+  # Testing factory gem
+  gem 'factory_bot_rails'#, '~> 4.0'
+  gem 'faker'
 end
 
 group :development do
@@ -77,5 +80,5 @@ gem 'devise'
 # Authorization gem
 gem 'cancancan', '~> 2.0'
 
-## Gemfile for Rails 3+, Sinatra, and Merb
+# Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.1.0'

@@ -15,55 +15,62 @@ describe Comment do
   # Comment validation tests
   ########################################################
   context "validation ->" do
-    let(:product) { Product.create!(name: "race bike") }
-    let(:user) { User.create!(email: "user1@gmail.com", password: "user1pw") }
+
+    before(:each) do
+      @user = FactoryBot.create(:random_user)
+      @product = FactoryBot.create(:random_product)
+    end
 
     it "all good -> valid" do
-      expect(Comment.new(
-        body: "b",
-        user_id: user.id,
-        product_id: product.id,
-        rating: 3
-      )).to be_valid
+      @comment = FactoryBot.create(:random_comment,
+        user_id: @user.id,
+        product_id: @product.id
+      )
+      expect(@comment).to be_valid
     end
 
     it "no rating -> invalid" do
+      # Factories don't work for this test -> They do not allow empty/nil fields
       expect(Comment.new(
         body: "b",
-        user_id: user.id,
-        product_id: product.id
+        user_id: @user.id,
+        product_id: @product.id
       )).not_to be_valid
     end
 
     it "no body -> invalid" do
+      # Factories don't work for this test -> They do not allow empty/nil fields
       expect(Comment.new(
-        user_id: user.id,
-        product_id: product.id,
+        user_id: @user.id,
+        product_id: @product.id,
         rating: 3
       )).not_to be_valid
     end
 
     it "no user_id -> invalid" do
+      # Factories don't work for this test -> They do not allow empty/nil fields
       expect(Comment.new(
         body: "b",
-        product_id: product.id,
+        product_id: @product.id,
         rating: 3
       )).not_to be_valid
     end
 
     it "no product_id -> invalid" do
+      # Factories don't work for this test -> They do not allow empty/nil fields
       expect(Comment.new(
         body: "b",
-        user_id: user.id,
+        user_id: @user.id,
         rating: 3
       )).not_to be_valid
     end
 
     it "incorrect rating type -> invalid" do
+      # Factories don't work for this test -> They do not allow wrong types
       expect(Comment.new(
         body: "b",
-        user_id: user.id,
-        product_id: product.id,
+        user_id: @user.id,
+        product_id: @product.id,
         rating: "a"
       )).not_to be_valid
     end
