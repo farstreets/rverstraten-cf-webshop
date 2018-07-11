@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Payments gem
+gem 'stripe'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -52,8 +55,6 @@ group :development, :test do
   # Testing factory gem
   gem 'factory_bot_rails'#, '~> 4.0'
   gem 'faker'
-  # Testing payments gem
-  gem 'stripe'
 end
 
 group :development do
