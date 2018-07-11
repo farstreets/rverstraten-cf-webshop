@@ -52,6 +52,8 @@ group :development, :test do
   # Testing factory gem
   gem 'factory_bot_rails'#, '~> 4.0'
   gem 'faker'
+  # Testing payments gem
+  gem 'stripe'
 end
 
 group :development do

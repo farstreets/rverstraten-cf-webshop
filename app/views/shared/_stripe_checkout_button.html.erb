@@ -1,0 +1,24 @@
+<script
+  id="stripe_checkout_button_id"
+  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+  data-name="Demo Site"
+  data-description="Example charge"
+  data-amount="999">
+</script>
+
+<!-- data-image="/square-image.png" -->
+
+<!-- <form action="your-server-side-code" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_yZqiDzwtWTawEGyvUoml5cTY"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Example charge"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-currency="eur">
+  </script>
+</form> -->
