@@ -1,11 +1,14 @@
+<!-- https://stripe.com/docs/checkout -->
+
 <script
   id="stripe_checkout_button_id"
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-image="<%= asset_path("favicon.png") %>"
+  data-image="<%= asset_path(@product.image_url) %>"
   data-name="Rubber Duck Debug"
   data-description="Session with duck '<%= @product.name %>'"
-  data-amount="999">
+  data-amount="<%= @product.price*100.to_i %>"
+  data-currency="eur">
 </script>
 
-<!-- data-image="<%= asset_path(@product.image_url) %>" -->
+<!-- data-image="<%= asset_path("favicon.png") %>" -->
