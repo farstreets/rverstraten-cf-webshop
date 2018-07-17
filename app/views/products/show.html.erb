@@ -18,7 +18,8 @@
         <div class="product_show_page_image">
           <p>
             <%= image_tag(@product.image_url,
-              class: "img-responsive product_show_page_image",
+              id: "zoom_product_showpage",
+              class: "img-responsive product_show_page_image img-zoom",
               alt: @product.image_url)
             %>
           </p>

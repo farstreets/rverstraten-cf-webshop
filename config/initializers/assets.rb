@@ -13,4 +13,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w( alert_fade.js )
+# Rails.application.config.assets.precompile += %w( jquery.elevateZoom-3.0.8.min.js )
 Rails.application.config.assets.paths << Rails.root.join('node_modules', 'vendor/assets')
