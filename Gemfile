@@ -55,6 +55,9 @@ group :development, :test do
   # Testing factory gem
   gem 'factory_bot_rails'#, '~> 4.0'
   gem 'faker'
+  gem 'brakeman', :require => false
+  # So you can use :require => false for anything that you need to run from
+  # the command line but don't need within your code.
 end
 
 group :development do

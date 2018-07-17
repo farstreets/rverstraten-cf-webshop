@@ -25,7 +25,6 @@ class ProductsController < ApplicationController
   def show
     # redirect_back(fallback_location: root_path)
     # Info about will_paginate : https://www.youtube.com/watch?v=MIf1ojX2AGY
-    byebug
     @comments = @product.comments.order("created_at DESC").page(params[:page]).per_page(3)
   end
 
