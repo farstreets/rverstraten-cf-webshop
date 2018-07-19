@@ -3,7 +3,8 @@
   <div id="add_review_div_around">
 
     <!-- <h4>Add a review:</h4> -->
-    <%= form_for([@product, @product.comments.build]) do |f| %>
+    <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
+
     <!-- <p> -->
       <!-- < % = f.label :body, "Add a quack for \"#{@product.name}\"", id: "review_label" % > -->
     <!-- </p> -->
