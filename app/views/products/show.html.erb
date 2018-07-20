@@ -29,7 +29,9 @@
   </div>
 
   <!-- <p>Average Rating: <div class="rated" data-score="< % = @product.average_rating % >"></div> </p> -->
-  <p><div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+  <div id="average_rating_outside_div">
+    <p><div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+  </div>
 
   <p>
     <!-- <strong>Price:</strong> -->
