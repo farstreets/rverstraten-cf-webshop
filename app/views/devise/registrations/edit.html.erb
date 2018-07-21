@@ -1,43 +1,71 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+<h1>Edit <%= resource_name.to_s.humanize %></h1>
 
-  <div class="field form-group">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-  </div>
+<div class="content_width_wrapper">
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+
+    <!-- Custom name-fields were enabled in 'application_controller.rb' -->
+    <div class="field form-group">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, autofocus: true, required: true, class:"form-control form_single_line_input", placeholder:"first name" %>
+    </div>
+
+    <!-- Custom name-fields were enabled in 'application_controller.rb' -->
+    <div class="field form-group">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, autofocus: true, required: true, class:"form-control form_single_line_input", placeholder:"last name" %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form_single_line_input" %>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= f.label :password %> <span><i>(
+      <% if @minimum_password_length %>
+        <%= @minimum_password_length %> characters minimum - optional )</i></span>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control form_single_line_input", placeholder:"password" %>
+    <!-- </div>
+
+    <div class="field form-group"> -->
+      <%= f.label :password_confirmation, hidden: true %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control form_single_line_input",
+      placeholder:"password confirmation" %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :current_password %> <i>( Confirm changes - required )</i>
+      <%= f.password_field :current_password, autocomplete: "off", class: "form-control form_single_line_input", placeholder:"current password" %>
+    </div>
+
+    <div style='padding-top:20px'></div>
+
+    <div class="actions">
+      <%= f.submit "Update", class: "btn btn-default" %>
+    </div>
+
   <% end %>
 
-  <div class="field form-group">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+  <div style='padding-top:10px'></div>
 
-  <div class="field form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-  </div>
+  <hr>
 
-  <div class="field form-group">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-    <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
-  </div>
+  <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p>
 
-  <div class="actions">
-    <%= f.submit "Update", class: "btn btn-default" %>
-  </div>
-<% end %>
+  <hr>
 
-<h3>Cancel my account</h3>
+  <div style='padding-top:20px'></div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p>
+  <%= link_to "Back", :back %>
 
-<%= link_to "Back", :back %>
+  <div style='padding-top:60px'></div>
+
+</div>

@@ -34,17 +34,24 @@
           <% end %>
         </span>
         <br>
-        <%= link_to 'Show', user %>
-        <%= link_to 'Edit', edit_user_path(user) %>
-        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <span>
+          <%= user.email %>
+        </span>
+        <br>
+        <!-- < % = link_to 'Show', user % > -->
+        <% if (current_user.id == user.id) %>
+          <%= link_to 'Edit', edit_user_path(user) %>
+        <% else %>
+          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </p>
       <hr>
     <% end %>
   <% end %>
 
-  <br>
+  <!-- <br>
 
-  <%= link_to 'New User', new_user_path %>
+  < % = link_to 'New User', new_user_path % > -->
 
   <br><br><br>
 

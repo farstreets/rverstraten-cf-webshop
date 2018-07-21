@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    redirect_to edit_user_registration_path
   end
 
   # POST /users
