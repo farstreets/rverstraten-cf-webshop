@@ -1,0 +1,38 @@
+<!-- Loop the products html into the webpage -->
+<!-- < % @products.each do |product| % > -->
+
+<% cache product do %>
+
+  <div class="col-xs-12 col-sm-4 col-md-3">
+    <div class="product_aspect_ratio_outer_2">
+      <div class="product_aspect_ratio_inner_2">
+        <%= image_tag(product.image_url,
+          class: "img-responsive product_image_2",
+          alt: product.image_url )
+        %>
+        <h3>
+          <%= product.name %>
+        </h3>
+        <p>
+          <%= product.description    %>
+        </p>
+        <p>
+          <%= number_to_currency(product.price, unit: "€") + " (30min.)" %>
+        </p>
+        <p>
+          <% if (signed_in? && current_user.admin?) %>
+            <%= link_to 'Show', product %>
+            <%= link_to 'Edit', edit_product_path(product) %>
+            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% else %>
+            <% if signed_in? %>
+              <%= link_to 'Book', simple_pages_debug_session_path(id: product.id) %>
+            <% end %>
+            <%= link_to 'Show', product %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+<% end %>

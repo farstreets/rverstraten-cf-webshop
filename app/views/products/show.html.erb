@@ -7,59 +7,63 @@
     <p id="notice" class="alert alert-info"><%= alert %></p>
 <% end %>
 
-<div class="content_width_wrapper">
+<% cache @product do %>
 
-  <h1 id="product_show_title"><%= @product.name %></h1>
-  <p id="product_show_description"><span class="text-overflow"><%= @product.description %></span></p>
+  <div class="content_width_wrapper">
 
-  <div id="product_show_page_show">
-    <div class="product_show_page_asp_ratio_outer">
-      <div class="product_show_page_asp_ratio_inner">
-        <div class="product_show_page_image">
-          <p>
-            <%= image_tag(@product.image_url,
-              id: "zoom_product_showpage",
-              class: "img-responsive product_show_page_image img-zoom",
-              alt: @product.image_url)
-            %>
-          </p>
+    <h1 id="product_show_title"><%= @product.name %></h1>
+    <p id="product_show_description"><span class="text-overflow"><%= @product.description %></span></p>
+
+    <div id="product_show_page_show">
+      <div class="product_show_page_asp_ratio_outer">
+        <div class="product_show_page_asp_ratio_inner">
+          <div class="product_show_page_image">
+            <p>
+              <%= image_tag(@product.image_url,
+                id: "zoom_product_showpage",
+                class: "img-responsive product_show_page_image img-zoom",
+                alt: @product.image_url)
+              %>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- <p>Average Rating: <div class="rated" data-score="< % = @product.average_rating % >"></div> </p> -->
-  <div id="average_rating_outside_div">
-    <p><div class="rated" data-score="<%= @product.average_rating %>"></div></p>
-  </div>
+    <!-- <p>Average Rating: <div class="rated" data-score="< % = @product.average_rating % >"></div> </p> -->
+    <div id="average_rating_outside_div">
+      <p><div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+    </div>
 
-  <p>
-    <!-- <strong>Price:</strong> -->
-    <span id="product_show_price" class="text-overflow"><%= number_to_currency(@product.price, unit: "€") + " (30min.)" %></span>
-  </p>
+    <p>
+      <!-- <strong>Price:</strong> -->
+      <span id="product_show_price" class="text-overflow"><%= number_to_currency(@product.price, unit: "€") + " (30min.)" %></span>
+    </p>
 
-  <% if (signed_in? && current_user.admin?) %>
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
-  <% else %>
-    <%= link_to 'Book', simple_pages_debug_session_path(id: @product.id) %> |
-    <%= link_to 'Back', products_path %>
-    <div style='padding-top:10px'></div>
-    <!-- Stripe payments button -->
-    <%= form_with(url: '/payments/create') do |form| %>
-      <%= render partial: "shared/stripe_checkout_button" %>
-      <%= hidden_field_tag(:product_id, @product.id) %>
+    <% if (signed_in? && current_user.admin?) %>
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Back', products_path %>
+    <% else %>
+      <%= link_to 'Book', simple_pages_debug_session_path(id: @product.id) %> |
+      <%= link_to 'Back', products_path %>
+      <div style='padding-top:10px'></div>
+      <!-- Stripe payments button -->
+      <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <div class="product-show-bottom-spacing"></div>
+    <div class="product-show-bottom-spacing"></div>
 
-  <%= render 'new_comment' %>
+    <%= render 'new_comment' %>
 
-  <div class="product-show-bottom-spacing"></div>
+    <div class="product-show-bottom-spacing"></div>
 
-  <%= render 'comments' %>
+    <%= render 'comments' %>
 
-  <div class="product-show-bottom-spacing"></div>
+    <div class="product-show-bottom-spacing"></div>
 
-</div>
+  </div>
+
+<% end %> <!-- / @product Cache -->
