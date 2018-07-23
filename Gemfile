@@ -91,3 +91,9 @@ gem 'will_paginate', '~> 3.1.0'
 
 # High performance pure Ruby client for accessing memcached servers
 gem 'dalli'
+
+# A full set of stores (Cache, Session, HTTP Cache)
+gem 'redis-rails'
+
+# New relic site performance tool
+gem 'newrelic_rpm'
