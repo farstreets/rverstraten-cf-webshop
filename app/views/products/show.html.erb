@@ -1,5 +1,7 @@
 <%= javascript_include_tag 'alert_fade.js' %>
 
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
 <% if notice %>
     <p id="notice" class="alert alert-info"><%= notice %></p>
 <% end %>
@@ -7,11 +9,9 @@
     <p id="notice" class="alert alert-info"><%= alert %></p>
 <% end %>
 
-<p class="alert alert-info" style="display:none" role="alert">A new comment was posted!</p>
-
 <% cache @product do %>
 
-  <div class="content_width_wrapper">
+  <div class="content_width_wrapper" data-product-id="<%= @product.id %>">
 
     <h1 id="product_show_title"><%= @product.name %></h1>
     <p id="product_show_description"><span class="text-overflow"><%= @product.description %></span></p>
