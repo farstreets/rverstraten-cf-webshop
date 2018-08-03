@@ -1,0 +1,100 @@
+2018-07-31T08:23:14.419563+00:00 app[web.1]: I, [2018-07-31T08:23:14.419476 #4]  INFO -- : [be437e31-f340-4cb5-9334-63241d1efcd1]   Rendered shared/_nav.html.erb (2.0ms)
+2018-07-31T08:23:14.420028+00:00 app[web.1]: I, [2018-07-31T08:23:14.419952 #4]  INFO -- : [be437e31-f340-4cb5-9334-63241d1efcd1]   Rendered shared/_footer.html.erb (0.1ms)
+2018-07-31T08:23:14.420586+00:00 app[web.1]: I, [2018-07-31T08:23:14.420504 #4]  INFO -- : [be437e31-f340-4cb5-9334-63241d1efcd1] Completed 200 OK in 252ms (Views: 239.1ms | ActiveRecord: 11.0ms)
+2018-07-31T08:23:14.426674+00:00 heroku[router]: at=info method=GET path="/products" host=rubberduckdebug.herokuapp.com request_id=be437e31-f340-4cb5-9334-63241d1efcd1 fwd="82.173.167.43" dyno=web.1 connect=1ms service=273ms status=200 bytes=10497 protocol=https
+2018-07-31T08:23:17.248431+00:00 app[web.1]: I, [2018-07-31T08:23:17.248323 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e] Started GET "/users/sign_in" for 82.173.167.43 at 2018-07-31 08:23:17 +0000
+2018-07-31T08:23:17.250354+00:00 app[web.1]: I, [2018-07-31T08:23:17.250275 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e] Processing by Devise::SessionsController#new as HTML
+2018-07-31T08:23:17.421407+00:00 app[web.1]: I, [2018-07-31T08:23:17.421255 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e]   Rendering devise/sessions/new.html.erb within layouts/application
+2018-07-31T08:23:17.460412+00:00 app[web.1]: I, [2018-07-31T08:23:17.460268 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e]   Rendered devise/shared/_links.html.erb (9.2ms)
+2018-07-31T08:23:17.460580+00:00 app[web.1]: I, [2018-07-31T08:23:17.460487 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e]   Rendered devise/sessions/new.html.erb within layouts/application (39.1ms)
+2018-07-31T08:23:17.464788+00:00 app[web.1]: I, [2018-07-31T08:23:17.464707 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e]   Rendered shared/_header.html.erb (0.1ms)
+2018-07-31T08:23:17.468004+00:00 app[web.1]: I, [2018-07-31T08:23:17.467916 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e]   Rendered shared/_nav.html.erb (1.8ms)
+2018-07-31T08:23:17.472735+00:00 app[web.1]: I, [2018-07-31T08:23:17.472649 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e]   Rendered shared/_footer.html.erb (0.1ms)
+2018-07-31T08:23:17.473307+00:00 app[web.1]: I, [2018-07-31T08:23:17.473228 #4]  INFO -- : [9be165e7-9a37-4f5e-8cd8-54336232ad7e] Completed 200 OK in 222ms (Views: 57.1ms | ActiveRecord: 58.6ms)
+2018-07-31T08:23:17.480754+00:00 heroku[router]: at=info method=GET path="/users/sign_in" host=rubberduckdebug.herokuapp.com request_id=9be165e7-9a37-4f5e-8cd8-54336232ad7e fwd="82.173.167.43" dyno=web.1 connect=1ms service=237ms status=200 bytes=10890 protocol=https
+2018-07-31T08:23:17.624679+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rubberduckdebug.herokuapp.com request_id=64d124cc-cb1c-49b7-bba9-2e4e147062b3 fwd="82.173.167.43" dyno=web.1 connect=1ms service=12ms status=304 bytes=48 protocol=https
+2018-07-31T08:23:19.642266+00:00 app[web.1]: I, [2018-07-31T08:23:19.642123 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd] Started POST "/users/sign_in" for 82.173.167.43 at 2018-07-31 08:23:19 +0000
+2018-07-31T08:23:19.671923+00:00 app[web.1]: I, [2018-07-31T08:23:19.670884 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd] Processing by Devise::SessionsController#create as HTML
+2018-07-31T08:23:19.673302+00:00 app[web.1]: I, [2018-07-31T08:23:19.673218 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"yEpA00FsOBCLwZFlDD5QKLJ2SH6Ah5qEVgeBGHrFjXgZTb2Ar85tfoN8GrKnDWXRVmRdrLBLsC2x1G8tET/Aqg==", "user"=>{"email"=>"rp.verstraten@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+2018-07-31T08:23:19.712529+00:00 app[web.1]: D, [2018-07-31T08:23:19.712391 #4] DEBUG -- : [f2392449-92d8-4827-b52e-767977ae93dd]   [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "rp.verstraten@gmail.com"], ["LIMIT", 1]]
+2018-07-31T08:23:19.725304+00:00 app[web.1]: I, [2018-07-31T08:23:19.725185 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd] Completed 401 Unauthorized in 51ms (ActiveRecord: 6.4ms)
+2018-07-31T08:23:19.729233+00:00 app[web.1]: I, [2018-07-31T08:23:19.729152 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd] Processing by Devise::SessionsController#new as HTML
+2018-07-31T08:23:19.729409+00:00 app[web.1]: I, [2018-07-31T08:23:19.729336 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"yEpA00FsOBCLwZFlDD5QKLJ2SH6Ah5qEVgeBGHrFjXgZTb2Ar85tfoN8GrKnDWXRVmRdrLBLsC2x1G8tET/Aqg==", "user"=>{"email"=>"rp.verstraten@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+2018-07-31T08:23:19.988226+00:00 heroku[router]: at=info method=POST path="/users/sign_in" host=rubberduckdebug.herokuapp.com request_id=f2392449-92d8-4827-b52e-767977ae93dd fwd="82.173.167.43" dyno=web.1 connect=1ms service=376ms status=200 bytes=6159 protocol=https
+2018-07-31T08:23:19.974142+00:00 app[web.1]: I, [2018-07-31T08:23:19.974010 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd]   Rendering devise/sessions/new.html.erb within layouts/application
+2018-07-31T08:23:19.978937+00:00 app[web.1]: I, [2018-07-31T08:23:19.978853 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd]   Rendered devise/shared/_links.html.erb (0.6ms)
+2018-07-31T08:23:19.979174+00:00 app[web.1]: I, [2018-07-31T08:23:19.979079 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd]   Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+2018-07-31T08:23:19.980807+00:00 app[web.1]: I, [2018-07-31T08:23:19.980707 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd]   Rendered shared/_header.html.erb (0.2ms)
+2018-07-31T08:23:19.982966+00:00 app[web.1]: I, [2018-07-31T08:23:19.982902 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd]   Rendered shared/_nav.html.erb (1.8ms)
+2018-07-31T08:23:19.983537+00:00 app[web.1]: I, [2018-07-31T08:23:19.983430 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd]   Rendered shared/_footer.html.erb (0.1ms)
+2018-07-31T08:23:19.983979+00:00 app[web.1]: I, [2018-07-31T08:23:19.983882 #4]  INFO -- : [f2392449-92d8-4827-b52e-767977ae93dd] Completed 200 OK in 254ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+2018-07-31T08:23:26.837495+00:00 app[web.1]: I, [2018-07-31T08:23:26.837375 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e] Started GET "/users/sign_up" for 82.173.167.43 at 2018-07-31 08:23:26 +0000
+2018-07-31T08:23:26.839258+00:00 app[web.1]: I, [2018-07-31T08:23:26.839184 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e] Processing by UserRegistrationsController#new as HTML
+2018-07-31T08:23:26.848300+00:00 app[web.1]: I, [2018-07-31T08:23:26.848208 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e]   Rendering devise/registrations/new.html.erb within layouts/application
+2018-07-31T08:23:26.860328+00:00 app[web.1]: I, [2018-07-31T08:23:26.860238 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e]   Rendered devise/registrations/new.html.erb within layouts/application (11.8ms)
+2018-07-31T08:23:26.855928+00:00 app[web.1]: I, [2018-07-31T08:23:26.855846 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e]   Rendered devise/shared/_links.html.erb (0.8ms)
+2018-07-31T08:23:26.861935+00:00 app[web.1]: I, [2018-07-31T08:23:26.861855 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e]   Rendered shared/_header.html.erb (0.1ms)
+2018-07-31T08:23:26.864433+00:00 app[web.1]: I, [2018-07-31T08:23:26.864356 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e]   Rendered shared/_nav.html.erb (2.2ms)
+2018-07-31T08:23:26.864963+00:00 app[web.1]: I, [2018-07-31T08:23:26.864889 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e]   Rendered shared/_footer.html.erb (0.1ms)
+2018-07-31T08:23:26.865556+00:00 app[web.1]: I, [2018-07-31T08:23:26.865478 #4]  INFO -- : [be876729-5c6a-458f-aba2-c4bc39f4496e] Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+2018-07-31T08:23:26.869855+00:00 heroku[router]: at=info method=GET path="/users/sign_up" host=rubberduckdebug.herokuapp.com request_id=be876729-5c6a-458f-aba2-c4bc39f4496e fwd="82.173.167.43" dyno=web.1 connect=1ms service=34ms status=200 bytes=11745 protocol=https
+2018-07-31T08:23:52.114007+00:00 app[web.1]: I, [2018-07-31T08:23:52.113892 #4]  INFO -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] Started POST "/users" for 82.173.167.43 at 2018-07-31 08:23:52 +0000
+2018-07-31T08:23:52.115942+00:00 app[web.1]: I, [2018-07-31T08:23:52.115849 #4]  INFO -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] Processing by UserRegistrationsController#create as HTML
+2018-07-31T08:23:52.117026+00:00 app[web.1]: I, [2018-07-31T08:23:52.116945 #4]  INFO -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zRIjYQCwJn1n4+uRbmZ0K+ff2j3auDhKPK6caN86t+kDMxTaonPv+vaF41ZdBlH0gjp0BzXFvPfAF8o5umSTmA==", "user"=>{"first_name"=>"Ruben", "last_name"=>"Verstraten", "email"=>"rp.verstraten@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+2018-07-31T08:23:52.343391+00:00 app[web.1]: D, [2018-07-31T08:23:52.343265 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+2018-07-31T08:23:52.352578+00:00 app[web.1]: D, [2018-07-31T08:23:52.352446 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   [1m[36mUser Exists (6.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rp.verstraten@gmail.com"], ["LIMIT", 1]]
+2018-07-31T08:23:52.359945+00:00 app[web.1]: D, [2018-07-31T08:23:52.359848 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   [1m[36mUser Create (5.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ruben"], ["last_name", "Verstraten"], ["created_at", "2018-07-31 08:23:52.353299"], ["updated_at", "2018-07-31 08:23:52.353299"], ["email", "rp.verstraten@gmail.com"], ["encrypted_password", "$2a$11$3aFVCSQadW.KY.QhaJ.3/uMz4a6//rvUaGvD6P7hEfxaduQRBpvcq"]]
+2018-07-31T08:23:52.364345+00:00 app[web.1]: D, [2018-07-31T08:23:52.364267 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+2018-07-31T08:23:52.367331+00:00 app[web.1]: D, [2018-07-31T08:23:52.367253 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+2018-07-31T08:23:52.372044+00:00 app[web.1]: D, [2018-07-31T08:23:52.371953 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "sign_in_count" = $2, "current_sign_in_at" = $3, "last_sign_in_at" = $4, "current_sign_in_ip" = $5, "last_sign_in_ip" = $6 WHERE "users"."id" = $7[0m  [["updated_at", "2018-07-31 08:23:52.367603"], ["sign_in_count", 1], ["current_sign_in_at", "2018-07-31 08:23:52.365248"], ["last_sign_in_at", "2018-07-31 08:23:52.365248"], ["current_sign_in_ip", "82.173.167.43"], ["last_sign_in_ip", "82.173.167.43"], ["id", 1]]
+2018-07-31T08:23:52.379139+00:00 app[web.1]: D, [2018-07-31T08:23:52.379057 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+2018-07-31T08:23:52.392847+00:00 app[web.1]: I, [2018-07-31T08:23:52.392373 #4]  INFO -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] Redirected to https://rubberduckdebug.herokuapp.com/
+2018-07-31T08:23:52.406984+00:00 app[web.1]: I, [2018-07-31T08:23:52.406910 #4]  INFO -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   Rendered user_mailer/welcome.html.erb within layouts/mailer (0.8ms)
+2018-07-31T08:23:52.406001+00:00 app[web.1]: I, [2018-07-31T08:23:52.405898 #4]  INFO -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]   Rendering user_mailer/welcome.html.erb within layouts/mailer
+2018-07-31T08:23:54.400804+00:00 app[web.1]: D, [2018-07-31T08:23:54.400663 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] UserMailer#welcome: processed outbound mail in 2005.7ms
+2018-07-31T08:23:54.452347+00:00 app[web.1]: I, [2018-07-31T08:23:54.451810 #4]  INFO -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] Sent mail to rp.verstraten@gmail.com (50.2ms)
+2018-07-31T08:23:54.452708+00:00 app[web.1]: D, [2018-07-31T08:23:54.452627 #4] DEBUG -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] Date: Tue, 31 Jul 2018 08:23:54 +0000
+2018-07-31T08:23:54.452711+00:00 app[web.1]: From: rp.verstraten@gmail.com
+2018-07-31T08:23:54.452715+00:00 app[web.1]: Message-ID: <5b601c9a62ea5_4337111431491@09a72356-bc4d-4c96-84cc-422a6ace75c2.mail>
+2018-07-31T08:23:54.452713+00:00 app[web.1]: To: rp.verstraten@gmail.com
+2018-07-31T08:23:54.452719+00:00 app[web.1]: Mime-Version: 1.0
+2018-07-31T08:23:54.452717+00:00 app[web.1]: Subject: Welcome to Rubber Duck Debug!
+2018-07-31T08:23:54.452721+00:00 app[web.1]: Content-Type: text/html;
+2018-07-31T08:23:54.452723+00:00 app[web.1]: charset=UTF-8
+2018-07-31T08:23:54.452725+00:00 app[web.1]: Content-Transfer-Encoding: 7bit
+2018-07-31T08:23:54.452727+00:00 app[web.1]: 
+2018-07-31T08:23:54.452728+00:00 app[web.1]: <!DOCTYPE html>
+2018-07-31T08:23:54.452730+00:00 app[web.1]: <html>
+2018-07-31T08:23:54.452732+00:00 app[web.1]: <head>
+2018-07-31T08:23:54.452734+00:00 app[web.1]: <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+2018-07-31T08:23:54.452735+00:00 app[web.1]: <style>
+2018-07-31T08:23:54.452737+00:00 app[web.1]: /* Email styles need to be inline */
+2018-07-31T08:23:54.452755+00:00 app[web.1]: </style>
+2018-07-31T08:23:54.452757+00:00 app[web.1]: </head>
+2018-07-31T08:23:54.452760+00:00 app[web.1]: <body>
+2018-07-31T08:23:54.452758+00:00 app[web.1]: 
+2018-07-31T08:23:54.452762+00:00 app[web.1]: <table>
+2018-07-31T08:23:54.452765+00:00 app[web.1]: <tr>
+2018-07-31T08:23:54.452763+00:00 app[web.1]: <tbody>
+2018-07-31T08:23:54.452767+00:00 app[web.1]: <td><h2>Welcome!</h2></td>
+2018-07-31T08:23:54.452768+00:00 app[web.1]: </tr>
+2018-07-31T08:23:54.452770+00:00 app[web.1]: <tr>
+2018-07-31T08:23:54.452772+00:00 app[web.1]: <td><p>Thank you for signing up with Rubber Duck Debug!</p></td>
+2018-07-31T08:23:54.452773+00:00 app[web.1]: </tr>
+2018-07-31T08:23:54.452777+00:00 app[web.1]: <td><p><strong>Your Rubber Duck Debug Team!</strong></p></td>
+2018-07-31T08:23:54.452779+00:00 app[web.1]: </tr>
+2018-07-31T08:23:54.452775+00:00 app[web.1]: <tr>
+2018-07-31T08:23:54.452780+00:00 app[web.1]: </tbody>
+2018-07-31T08:23:54.452782+00:00 app[web.1]: </table>
+2018-07-31T08:23:54.452783+00:00 app[web.1]: 
+2018-07-31T08:23:54.452785+00:00 app[web.1]: </body>
+2018-07-31T08:23:54.452787+00:00 app[web.1]: </html>
+2018-07-31T08:23:54.452788+00:00 app[web.1]: 
+2018-07-31T08:23:54.454049+00:00 app[web.1]: I, [2018-07-31T08:23:54.453940 #4]  INFO -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] Completed 500 Internal Server Error in 2336ms (ActiveRecord: 25.0ms)
+2018-07-31T08:23:54.461658+00:00 app[web.1]: F, [2018-07-31T08:23:54.461527 #4] FATAL -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]
+2018-07-31T08:23:54.461774+00:00 app[web.1]: F, [2018-07-31T08:23:54.461694 #4] FATAL -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] Net::SMTPFatalError (550 Unauthenticated senders not allowed
+2018-07-31T08:23:54.461777+00:00 app[web.1]: ):
+2018-07-31T08:23:54.461897+00:00 app[web.1]: F, [2018-07-31T08:23:54.461830 #4] FATAL -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47]
+2018-07-31T08:23:54.462030+00:00 app[web.1]: F, [2018-07-31T08:23:54.461931 #4] FATAL -- : [ad8b04a2-bd90-4c4c-82e1-f6d230235c47] app/controllers/user_registrations_controller.rb:5:in `create'
+2018-07-31T08:23:54.466486+00:00 heroku[router]: at=info method=POST path="/users" host=rubberduckdebug.herokuapp.com request_id=ad8b04a2-bd90-4c4c-82e1-f6d230235c47 fwd="82.173.167.43" dyno=web.1 connect=1ms service=2357ms status=500 bytes=1827 protocol=https
+2018-07-31T08:23:55.600820+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rubberduckdebug.herokuapp.com request_id=accd21a2-5418-40b6-aa73-8c45a0ae2446 fwd="82.173.167.43" dyno=web.1 connect=1ms service=3ms status=304 bytes=48 protocol=https
