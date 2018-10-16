@@ -6,9 +6,11 @@ class Comment < ApplicationRecord
   validates :product, presence: true
   validates :rating, numericality: { only_integer: true }
 
+  after_create_commit { CommentUpdateJob.perform_later(self, self.user) }
+
   # Called by e.g. <%= @product.comments.rating_desc.first %>
   scope :rating_desc, -> { order(rating: :desc) }
   # Called by e.g. <%= @product.comments.rating_asc.first %>
   scope :rating_asc, -> { order(rating: :asc) }
-  
+
 end
